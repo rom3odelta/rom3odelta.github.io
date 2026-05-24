@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Store &amp; Forget</title>
+  <meta name="description" content="Privacy policy for Store & Forget, a local-first Android home inventory app by Koala Lab.">
+  <style>
+    :root {
+      --fg: #1c1d22;
+      --muted: #555a66;
+      --accent: #2563eb;
+      --bg: #fafbfc;
+      --card: #ffffff;
+      --border: #e3e5ea;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #e7e9ee;
+        --muted: #9aa0ad;
+        --accent: #60a5fa;
+        --bg: #0f1115;
+        --card: #161922;
+        --border: #2a2f3c;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      padding: 32px 16px 64px;
+    }
+    main {
+      max-width: 740px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 36px 32px;
+    }
+    h1 { font-size: 28px; margin: 0 0 8px; letter-spacing: -0.2px; }
+    h2 { font-size: 18px; margin: 32px 0 8px; letter-spacing: -0.1px; }
+    p, ul { margin: 10px 0; }
+    ul { padding-left: 22px; }
+    li { margin: 4px 0; }
+    a { color: var(--accent); }
+    .meta { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
+    .meta b { color: var(--fg); }
+    .footer { color: var(--muted); font-size: 13px; margin-top: 36px; text-align: center; }
+    code { background: rgba(127,127,127,0.12); padding: 1px 6px; border-radius: 4px; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Privacy Policy — Store &amp; Forget</h1>
+    <div class="meta">
+      <div><b>Effective date:</b> 2026-05-25</div>
+      <div><b>App:</b> Store &amp; Forget (Android)</div>
+      <div><b>Operator:</b> Koala Lab</div>
+      <div><b>Contact:</b> <a href="mailto:rom3odelta@gmail.com">rom3odelta@gmail.com</a></div>
+    </div>
+
+    <h2>What this app is</h2>
+    <p>Store &amp; Forget is a local-first Android inventory tracker that helps you remember where you put physical items in your home. You take a photo of something, optionally tag and describe it, and the app records which room and storage location it went into.</p>
+
+    <h2>Data we collect</h2>
+    <p>The app collects only what you actively put into it:</p>
+    <ul>
+      <li><b>Photos</b> you take with the camera or pick from your photo library and attach to items.</li>
+      <li><b>Text you type</b> — item names, descriptions, specifications, tags, notes, and the names you give to rooms and storage locations.</li>
+    </ul>
+    <p>We do <b>not</b> collect:</p>
+    <ul>
+      <li>Your name, email address, phone number, or any other personal identifier.</li>
+      <li>Your location.</li>
+      <li>Device identifiers, advertising IDs, or analytics events.</li>
+      <li>Your contacts, calendar, SMS, call logs, or any other personal data on your device.</li>
+      <li>Audio recordings (the camera permission does not record audio in this app).</li>
+      <li>Crash reports or usage telemetry.</li>
+    </ul>
+
+    <h2>Where your data is stored</h2>
+    <p>Everything you enter — photos, text, item records — is stored <b>locally on your device</b> inside the app's private storage area. There is no account system, no cloud database, and no cross-device sync. We never see your data.</p>
+
+    <h2>Data shared with third parties</h2>
+    <p>When (and only when) you use the AI features — the "scan item" auto-describe button or the "find similar items" search — the app sends data to Google's Gemini API on your behalf:</p>
+    <ul>
+      <li><b>Auto-describe a scanned item:</b> the photo of the item, plus any text you've already entered for that item, is sent to Google's Gemini vision model so it can suggest a name, description, and tags.</li>
+      <li><b>Find similar items / embed text for search:</b> item text (name, description, specs, tags, notes) is sent to Google's Gemini embedding model to produce a search vector. The vector is stored locally; the original text is not retained by us.</li>
+    </ul>
+    <p>Google's handling of data sent to the Gemini API is governed by Google's privacy policy and Gemini API terms of service:</p>
+    <ul>
+      <li><a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+      <li><a href="https://ai.google.dev/gemini-api/terms">https://ai.google.dev/gemini-api/terms</a></li>
+    </ul>
+    <p>Under Google's current free-tier Gemini Developer API terms, content sent to the API may be used by Google to improve their services. If you do not want this to happen, do not use the AI features in the app; all non-AI functionality (manual entry, photos, browse, search by name) works without any network calls.</p>
+    <p>No other third parties receive your data. There are no advertising networks, analytics SDKs, or crash-reporting services in the app.</p>
+
+    <h2>Permissions the app requests</h2>
+    <ul>
+      <li><b>Camera</b> — to let you photograph items as you store them. Photos are saved to the app's private storage on your device.</li>
+      <li><b>Photos / Media library</b> — to let you attach existing photos from your library to an item.</li>
+    </ul>
+
+    <h2>How long we keep your data</h2>
+    <p>Your data lives on your device for as long as you keep it there. To delete an item, room, or storage, use the delete actions inside the app. To delete everything at once, uninstall the app — Android will remove the app's private storage, including the SQLite database and attached photo files.</p>
+    <p>Because we do not have your data on any server, there is no separate deletion request process; deletion happens locally on your device.</p>
+
+    <h2>Children</h2>
+    <p>This app is not directed at children under 13, and we do not knowingly collect any data from children. The app has no account system, so we have no way to identify a user's age.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If we materially change how the app collects, uses, or shares data, we will update this policy and update the in-app and Play Store listing references to it. The "Effective date" at the top reflects the most recent change.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy can go to <a href="mailto:rom3odelta@gmail.com">rom3odelta@gmail.com</a>.</p>
+
+    <div class="footer">© 2026 Koala Lab</div>
+  </main>
+</body>
+</html>
