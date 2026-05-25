@@ -85,17 +85,18 @@
     <p>Everything you enter — photos, text, item records — is stored <b>locally on your device</b> inside the app's private storage area. There is no account system, no cloud database, and no cross-device sync. We never see your data.</p>
 
     <h2>Data shared with third parties</h2>
-    <p>When (and only when) you use the AI features — the "scan item" auto-describe button or the "find similar items" search — the app sends data to Google's Gemini API on your behalf:</p>
+    <p>When the app's AI features are active, the app sends data to Google's Gemini API on your behalf:</p>
     <ul>
-      <li><b>Auto-describe a scanned item:</b> the photo of the item, plus any text you've already entered for that item, is sent to Google's Gemini vision model so it can suggest a name, description, and tags.</li>
-      <li><b>Find similar items / embed text for search:</b> item text (name, description, specs, tags, notes) is sent to Google's Gemini embedding model to produce a search vector. The vector is stored locally; the original text is not retained by us.</li>
+      <li><b>Auto-describe a scanned item (on tap):</b> when you tap "AI scan," the photo of the item plus any text you've already entered for that item is sent to Google's Gemini vision model so it can suggest a name, description, and tags. This happens only when you tap the scan button.</li>
+      <li><b>Search-index an item (automatic, on save):</b> when you save a new item or edit an existing one, the item's text (name, description, specs, tags, notes) is sent to Google's Gemini embedding model. The model returns a numerical search vector that the app stores locally on your device so the "Ask AI" semantic search can match the item later. The vector itself is meaningless without the original text and is stored only on your device.</li>
+      <li><b>Ask AI semantic search (on tap):</b> when you tap "Ask AI," your search query is sent to Google's Gemini embedding model to produce a query vector, which is compared locally against the item vectors stored on your device.</li>
     </ul>
     <p>Google's handling of data sent to the Gemini API is governed by Google's privacy policy and Gemini API terms of service:</p>
     <ul>
       <li><a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
       <li><a href="https://ai.google.dev/gemini-api/terms">https://ai.google.dev/gemini-api/terms</a></li>
     </ul>
-    <p>Under Google's current free-tier Gemini Developer API terms, content sent to the API may be used by Google to improve their services. If you do not want this to happen, do not use the AI features in the app; all non-AI functionality (manual entry, photos, browse, search by name) works without any network calls.</p>
+    <p>Under Google's current free-tier Gemini Developer API terms, content sent to the API may be used by Google to improve their services. If you require zero network calls from the app, use the manual entry flow only and revoke network permissions for the app at the OS level. The non-AI functionality (manual entry, photos, browse, search by name) works fully offline.</p>
     <p>No other third parties receive your data. There are no advertising networks, analytics SDKs, or crash-reporting services in the app.</p>
 
     <h2>Permissions the app requests</h2>
