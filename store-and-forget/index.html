@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — Store &amp; Forget</title>
-  <meta name="description" content="Privacy policy for Store & Forget, a local-first Android home inventory app by Koala Lab Studio.">
+  <meta name="description" content="Privacy policy for Store & Forget, a local-first Android home inventory app by Hyper Koala Studio.">
   <style>
     :root {
       --fg: #1c1d22;
@@ -42,6 +42,7 @@
     }
     h1 { font-size: 28px; margin: 0 0 8px; letter-spacing: -0.2px; }
     h2 { font-size: 18px; margin: 32px 0 8px; letter-spacing: -0.1px; }
+    h3 { font-size: 15px; margin: 20px 0 4px; letter-spacing: -0.1px; }
     p, ul { margin: 10px 0; }
     ul { padding-left: 22px; }
     li { margin: 4px 0; }
@@ -56,14 +57,14 @@
   <main>
     <h1>Privacy Policy — Store &amp; Forget</h1>
     <div class="meta">
-      <div><b>Effective date:</b> 2026-05-25</div>
+      <div><b>Effective date:</b> 2026-06-11</div>
       <div><b>App:</b> Store &amp; Forget (Android)</div>
-      <div><b>Operator:</b> Koala Lab Studio</div>
+      <div><b>Operator:</b> Hyper Koala Studio</div>
       <div><b>Contact:</b> <a href="mailto:rom3odelta@gmail.com">rom3odelta@gmail.com</a></div>
     </div>
 
     <h2>What this app is</h2>
-    <p>Store &amp; Forget is a local-first Android inventory tracker that helps you remember where you put physical items in your home. You take a photo of something, optionally tag and describe it, and the app records which room and storage location it went into.</p>
+    <p>Store &amp; Forget is a local-first Android inventory tracker that helps you remember where you put physical items in your home. You take a photo of something, optionally tag and describe it, and the app records which room and storage location it went into. Your inventory lives on your device; the optional features below (AI, sign-in, ads, cloud backup, and buying scan credits) are the only times the app talks to a server.</p>
 
     <h2>Data we collect</h2>
     <p>The app collects only what you actively put into it:</p>
@@ -71,59 +72,72 @@
       <li><b>Photos</b> you take with the camera or pick from your photo library and attach to items.</li>
       <li><b>Text you type</b> — item names, descriptions, specifications, tags, notes, and the names you give to rooms and storage locations.</li>
     </ul>
+    <p>If you choose to sign in (see "Signing in" below), we also receive your <b>Google account email, name, and profile photo</b> from Google Sign-In, and the app is assigned a <b>user ID</b> that identifies your account to our scan-credit service.</p>
     <p>We do <b>not</b> collect:</p>
     <ul>
-      <li>Your name, email address, phone number, or any other personal identifier.</li>
       <li>Your location.</li>
-      <li>Device identifiers, advertising IDs, or analytics events.</li>
       <li>Your contacts, calendar, SMS, call logs, or any other personal data on your device.</li>
       <li>Audio recordings (the camera permission does not record audio in this app).</li>
-      <li>Crash reports or usage telemetry.</li>
+      <li>Crash reports or usage telemetry of our own.</li>
     </ul>
 
     <h2>Where your data is stored</h2>
-    <p>Everything you enter — photos, text, item records — is stored <b>locally on your device</b> inside the app's private storage area. There is no account system, no cloud database, and no cross-device sync. We never see your data.</p>
+    <p>Everything you enter — photos, text, item records — is stored <b>locally on your device</b> inside the app's private storage area. There is no cloud database that we operate that holds your inventory, and there is no cross-device sync of your inventory through our servers. The optional cloud backup (below) goes to <b>your own</b> Google Drive, not to us.</p>
 
-    <h2>Data shared with third parties</h2>
-    <p>When the app's AI features are active, the app sends data to Google's Gemini API on your behalf:</p>
+    <h2>Optional features that use the network</h2>
+    <p>The app works fully offline for manual entry, photos, browsing, and search-by-name. These features reach out over the network, and only when you use them:</p>
+
+    <h3>AI scan and "Ask AI" semantic search (Google Gemini)</h3>
+    <p>When the app's AI features are active, the app sends data to Google's Gemini API:</p>
     <ul>
       <li><b>Auto-describe a scanned item (on tap):</b> when you tap "AI scan," the photo of the item plus any text you've already entered for that item is sent to Google's Gemini vision model so it can suggest a name, description, and tags. This happens only when you tap the scan button.</li>
       <li><b>Search-index an item (automatic, on save):</b> when you save a new item or edit an existing one, the item's text (name, description, specs, tags, notes) is sent to Google's Gemini embedding model. The model returns a numerical search vector that the app stores locally on your device so the "Ask AI" semantic search can match the item later. The vector itself is meaningless without the original text and is stored only on your device.</li>
       <li><b>Ask AI semantic search (on tap):</b> when you tap "Ask AI," your search query is sent to Google's Gemini embedding model to produce a query vector, which is compared locally against the item vectors stored on your device.</li>
     </ul>
-    <p>Google's handling of data sent to the Gemini API is governed by Google's privacy policy and Gemini API terms of service:</p>
-    <ul>
-      <li><a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-      <li><a href="https://ai.google.dev/gemini-api/terms">https://ai.google.dev/gemini-api/terms</a></li>
-    </ul>
-    <p>Under Google's current free-tier Gemini Developer API terms, content sent to the API may be used by Google to improve their services. If you require zero network calls from the app, use the manual entry flow only and revoke network permissions for the app at the OS level. The non-AI functionality (manual entry, photos, browse, search by name) works fully offline.</p>
-    <p>No other third parties receive your data. There are no advertising networks, analytics SDKs, or crash-reporting services in the app.</p>
+    <p>Free AI scans use an API key bundled in the app and call Google directly. If you buy scan credits (below) or are signed in and using server-provided scans, the same photo/text is instead routed through our scan-credit server (see "Scan-credit service") on its way to Google. Google's handling of data sent to the Gemini API is governed by <a href="https://policies.google.com/privacy">Google's privacy policy</a> and the <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms of service</a>.</p>
+
+    <h3>Signing in (Google Sign-In / Firebase Authentication)</h3>
+    <p>Signing in is optional. You only need an account to buy scan credits, to earn extra scans by watching a rewarded ad, or to back up your inventory to your Google Drive. When you sign in, Google Sign-In provides the app with your Google account's <b>email, name, and profile photo</b>, and Firebase Authentication issues a <b>user ID</b> that identifies your account to our scan-credit service. We do not receive your Google password. You can use the entire core app without ever signing in.</p>
+
+    <h3>Cloud backup to your own Google Drive (optional)</h3>
+    <p>If you turn on cloud backup, the app copies your inventory (item text and photos) into a <b>private, app-specific folder in your own Google Drive</b> (the Drive "app data" area). This data lives in <b>your</b> Google account, under your control — we cannot see or access it, and it is not visible in your normal Drive file list. You can disconnect backup or delete the backup folder at any time from your Google account. This uses Google Drive, governed by Google's privacy policy.</p>
+
+    <h3>Ads (Google AdMob)</h3>
+    <p>Store &amp; Forget shows ads after a number of free scans, unless you hold purchased scan credits. Ads are served by <b>Google AdMob</b>, which may collect and use a <b>device advertising ID</b> and related device/ad information to serve and measure ads. This data is processed by Google as an advertising partner. You can reset or limit your advertising ID in your device's Google settings. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a> and Google's privacy policy.</p>
+
+    <h3>Scan-credit service (our server)</h3>
+    <p>To meter free and paid AI scans, the app talks to a small server we operate (a Cloudflare Worker). It receives your Firebase <b>user ID</b> to track how many scans your account has left, and the rewarded-ad reward callback that grants you credits. On paid/credit-backed scans it also receives the <b>item photo and text</b> for that scan and immediately forwards them to Google's Gemini API to produce the result — it does <b>not</b> store your photos or item text. We keep only a per-account scan/credit balance, not your inventory.</p>
+
+    <h3>Buying scan credits (Google Play Billing)</h3>
+    <p>If you buy a scan-credit pack, the purchase is handled by <b>Google Play Billing</b>. Google processes the payment; we receive a purchase confirmation (a token/event and the user ID it applies to) so we can add the credits to your balance. We do <b>not</b> receive your card number or other payment details.</p>
 
     <h2>Permissions the app requests</h2>
     <ul>
       <li><b>Camera</b> — to let you photograph items as you store them. Photos are saved to the app's private storage on your device.</li>
       <li><b>Photos / Media library</b> — to let you attach existing photos from your library to an item.</li>
+      <li><b>Internet / network</b> — for the optional features above (AI, sign-in, ads, cloud backup, buying credits).</li>
     </ul>
 
     <h2 id="delete-data">How to delete your data</h2>
-    <p>Your data lives on your device for as long as you keep it there. You can delete it at any time:</p>
+    <p>Your inventory lives on your device for as long as you keep it there. You can delete it at any time:</p>
     <ul>
       <li><b>Delete individual items, rooms, or storages</b> — use the delete actions inside the app on each item, room, or storage detail screen.</li>
       <li><b>Erase everything in the app at once</b> — open <b>Settings → Data → Erase all data</b>. This wipes the local database (all rooms, storages, items) and removes every photo file from the app's private storage.</li>
       <li><b>Delete the app entirely</b> — uninstall Store &amp; Forget from your device. Android will remove the app's private storage, including the SQLite database and all attached photo files.</li>
+      <li><b>Delete your cloud backup</b> — remove the app's data folder from your own Google Drive account.</li>
+      <li><b>Delete your scan-credit balance</b> — the only data we hold on a server is your account's scan/credit balance; email us at the address below to have it removed.</li>
     </ul>
-    <p>Because we do not store any of your data on a server, there is no separate deletion request process and no account to close — deletion is fully under your control on your device.</p>
 
     <h2>Children</h2>
-    <p>This app is not directed at children under 13, and we do not knowingly collect any data from children. The app has no account system, so we have no way to identify a user's age.</p>
+    <p>This app is not directed at children under 13, and we do not knowingly collect any data from children.</p>
 
     <h2>Changes to this policy</h2>
     <p>If we materially change how the app collects, uses, or shares data, we will update this policy and update the in-app and Play Store listing references to it. The "Effective date" at the top reflects the most recent change.</p>
 
     <h2>Contact</h2>
-    <p>Questions about this policy can go to <a href="mailto:rom3odelta@gmail.com">rom3odelta@gmail.com</a>.</p>
+    <p>Questions about this policy, or requests to delete your account's scan-credit balance on our server, can go to <a href="mailto:rom3odelta@gmail.com">rom3odelta@gmail.com</a>.</p>
 
-    <div class="footer">© 2026 Koala Lab Studio</div>
+    <div class="footer">© 2026 Hyper Koala Studio</div>
   </main>
 </body>
 </html>
