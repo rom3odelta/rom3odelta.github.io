@@ -57,7 +57,7 @@
   <main>
     <h1>Privacy Policy — Store &amp; Forget</h1>
     <div class="meta">
-      <div><b>Effective date:</b> 2026-06-11</div>
+      <div><b>Effective date:</b> 2026-06-14</div>
       <div><b>App:</b> Store &amp; Forget (Android)</div>
       <div><b>Operator:</b> Hyper Koala Studio</div>
       <div><b>Contact:</b> <a href="mailto:rom3odelta@gmail.com">rom3odelta@gmail.com</a></div>
@@ -78,7 +78,8 @@
       <li>Your location.</li>
       <li>Your contacts, calendar, SMS, call logs, or any other personal data on your device.</li>
       <li>Audio recordings (the camera permission does not record audio in this app).</li>
-      <li>Crash reports or usage telemetry of our own.</li>
+      <li>Crash reports of our own.</li>
+      <li>Usage analytics <b>unless you are signed in and turn them on</b> (see "Usage analytics" below). They are off by default and off entirely while you are signed out.</li>
     </ul>
 
     <h2>Where your data is stored</h2>
@@ -98,6 +99,16 @@
 
     <h3>Signing in (Google Sign-In / Firebase Authentication)</h3>
     <p>Signing in is optional. You only need an account to buy scan credits, to earn extra scans by watching a rewarded ad, or to back up your inventory to your Google Drive. When you sign in, Google Sign-In provides the app with your Google account's <b>email, name, and profile photo</b>, and Firebase Authentication issues a <b>user ID</b> that identifies your account to our scan-credit service. We do not receive your Google password. You can use the entire core app without ever signing in.</p>
+
+    <h3>Usage analytics (optional — off unless you opt in)</h3>
+    <p>To understand which features people use and where the app is rough, you can optionally share anonymous product analytics. This is <b>off by default</b>. It is available only when you are <b>signed in</b>, and only after you turn on <b>Settings → "Share usage analytics."</b> While you are signed out, no analytics are collected at all.</p>
+    <p>When you opt in, the app uses <b>Google Analytics for Firebase</b> to record anonymous, behavior-only events:</p>
+    <ul>
+      <li><b>Which actions you take</b> — e.g. starting an AI scan, saving an item, purchasing scan credits, or earning credits from a rewarded ad — plus standard app-lifecycle events (first open, session start).</li>
+      <li><b>Basic technical context</b> — your app version and general device/OS information.</li>
+    </ul>
+    <p>Each event is tied only to a <b>random, app-generated analytics instance ID</b>. We do <b>not</b> send your name, email, or account ID to analytics, and we never link these events to your identity.</p>
+    <p>We do <b>not</b> send your inventory to analytics. Item names, photos, descriptions, specs, tags, notes, and the names of your rooms and storage locations are <b>never</b> included in any analytics event — analytics see <i>that</i> you saved an item, never <i>what</i> the item is. You can turn analytics back off at any time from <b>Settings → "Share usage analytics,"</b> which stops further collection. Analytics data is processed by Google under Google's privacy policy.</p>
 
     <h3>Cloud backup to your own Google Drive (optional)</h3>
     <p>If you turn on cloud backup, the app copies your inventory (item text and photos) into a <b>private, app-specific folder in your own Google Drive</b> (the Drive "app data" area). This data lives in <b>your</b> Google account, under your control — we cannot see or access it, and it is not visible in your normal Drive file list. You can disconnect backup or delete the backup folder at any time from your Google account. This uses Google Drive, governed by Google's privacy policy.</p>
