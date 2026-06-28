@@ -57,20 +57,20 @@
   <main>
     <h1>Privacy Policy — Store &amp; Forget</h1>
     <div class="meta">
-      <div><b>Effective date:</b> 2026-06-14</div>
+      <div><b>Effective date:</b> 2026-06-28</div>
       <div><b>App:</b> Store &amp; Forget (Android)</div>
       <div><b>Operator:</b> Hyper Koala Studio</div>
       <div><b>Contact:</b> <a href="mailto:rom3odelta@gmail.com">rom3odelta@gmail.com</a></div>
     </div>
 
     <h2>What this app is</h2>
-    <p>Store &amp; Forget is a local-first Android inventory tracker that helps you remember where you put physical items in your home. You take a photo of something, optionally tag and describe it, and the app records which room and storage location it went into. Your inventory lives on your device; the optional features below (AI, sign-in, ads, cloud backup, and buying scan credits) are the only times the app talks to a server.</p>
+    <p>Store &amp; Forget is a local-first Android inventory tracker that helps you remember where you put physical items in your home. You take a photo of something, optionally tag and describe it, and the app records which area and spot it went into. Your inventory lives on your device; the optional features below (AI, sign-in, ads, cloud backup, and buying scan credits) are the only times the app talks to a server.</p>
 
     <h2>Data we collect</h2>
     <p>The app collects only what you actively put into it:</p>
     <ul>
       <li><b>Photos</b> you take with the camera or pick from your photo library and attach to items.</li>
-      <li><b>Text you type</b> — item names, descriptions, specifications, tags, notes, and the names you give to rooms and storage locations.</li>
+      <li><b>Text you type</b> — item names, descriptions, specifications, tags, notes, and the names you give to areas and spots.</li>
     </ul>
     <p>If you choose to sign in (see "Signing in" below), we also receive your <b>Google account email, name, and profile photo</b> from Google Sign-In, and the app is assigned a <b>user ID</b> that identifies your account to our scan-credit service.</p>
     <p>We do <b>not</b> collect:</p>
@@ -88,27 +88,27 @@
     <h2>Optional features that use the network</h2>
     <p>The app works fully offline for manual entry, photos, browsing, and search-by-name. These features reach out over the network, and only when you use them:</p>
 
-    <h3>AI scan and "Ask AI" semantic search (Google Gemini)</h3>
-    <p>When the app's AI features are active, the app sends data to Google's Gemini API:</p>
+    <h3>Smart Scan and search indexing (Google Gemini)</h3>
+    <p>When the app's Smart features are active, the app sends data to Google's Gemini API:</p>
     <ul>
-      <li><b>Auto-describe a scanned item (on tap):</b> when you tap "AI scan," the photo of the item plus any text you've already entered for that item is sent to Google's Gemini vision model so it can suggest a name, description, and tags. This happens only when you tap the scan button.</li>
-      <li><b>Search-index an item (automatic, on save):</b> when you save a new item or edit an existing one, the item's text (name, description, specs, tags, notes) is sent to Google's Gemini embedding model. The model returns a numerical search vector that the app stores locally on your device so the "Ask AI" semantic search can match the item later. The vector itself is meaningless without the original text and is stored only on your device.</li>
-      <li><b>Ask AI semantic search (on tap):</b> when you tap "Ask AI," your search query is sent to Google's Gemini embedding model to produce a query vector, which is compared locally against the item vectors stored on your device.</li>
+      <li><b>Auto-describe a scanned item (on tap):</b> when you tap "Smart Scan," the photo of the item plus any text you've already entered for that item is sent to Google's Gemini vision model so it can suggest a name, description, and tags. This happens only when you tap the scan button.</li>
+      <li><b>Search-index an item (automatic, on save):</b> when you save a new item or edit an existing one, the item's text (name, description, specs, tags, notes) is sent to Google's Gemini embedding model. The model returns a numerical search vector that the app stores locally on your device. The vector itself is meaningless without the original text and is stored only on your device.</li>
+      <li><b>Smart Find semantic search (on tap):</b> when you run a Smart Find search, your search query text is sent to Google's Gemini embedding model to produce a query vector. That vector is then compared locally, on your device, against the item vectors stored there — your inventory itself is never sent for the search, only the words you typed into the search box.</li>
     </ul>
-    <p>Free AI scans use an API key bundled in the app and call Google directly. If you buy scan credits (below) or are signed in and using server-provided scans, the same photo/text is instead routed through our scan-credit server (see "Scan-credit service") on its way to Google. Google's handling of data sent to the Gemini API is governed by <a href="https://policies.google.com/privacy">Google's privacy policy</a> and the <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms of service</a>.</p>
+    <p>Free scans use an API key bundled in the app and call Google directly. If you buy scan credits (below) or are signed in and using server-provided scans, the same photo/text is instead routed through our scan-credit server (see "Scan-credit service") on its way to Google. Google's handling of data sent to the Gemini API is governed by <a href="https://policies.google.com/privacy">Google's privacy policy</a> and the <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms of service</a>.</p>
 
     <h3>Signing in (Google Sign-In / Firebase Authentication)</h3>
     <p>Signing in is optional. You only need an account to buy scan credits, to earn extra scans by watching a rewarded ad, or to back up your inventory to your Google Drive. When you sign in, Google Sign-In provides the app with your Google account's <b>email, name, and profile photo</b>, and Firebase Authentication issues a <b>user ID</b> that identifies your account to our scan-credit service. We do not receive your Google password. You can use the entire core app without ever signing in.</p>
 
     <h3>Usage analytics (optional — off unless you opt in)</h3>
-    <p>To understand which features people use and where the app is rough, you can optionally share anonymous product analytics. This is <b>off by default</b>. It is available only when you are <b>signed in</b>, and only after you turn on <b>Settings → "Share usage analytics."</b> While you are signed out, no analytics are collected at all.</p>
+    <p>To understand which features people use and where the app is rough, you can optionally share anonymous product analytics. This is <b>off by default</b>. It is available only when you are <b>signed in</b>, and only after you turn on <b>Advanced Settings → "Share usage analytics."</b> While you are signed out, no analytics are collected at all.</p>
     <p>When you opt in, the app uses <b>Google Analytics for Firebase</b> to record anonymous, behavior-only events:</p>
     <ul>
-      <li><b>Which actions you take</b> — e.g. starting an AI scan, saving an item, purchasing scan credits, or earning credits from a rewarded ad — plus standard app-lifecycle events (first open, session start).</li>
+      <li><b>Which actions you take</b> — e.g. starting a scan, saving an item, purchasing scan credits, or earning credits from a rewarded ad — plus standard app-lifecycle events (first open, session start).</li>
       <li><b>Basic technical context</b> — your app version and general device/OS information.</li>
     </ul>
     <p>Each event is tied only to a <b>random, app-generated analytics instance ID</b>. We do <b>not</b> send your name, email, or account ID to analytics, and we never link these events to your identity.</p>
-    <p>We do <b>not</b> send your inventory to analytics. Item names, photos, descriptions, specs, tags, notes, and the names of your rooms and storage locations are <b>never</b> included in any analytics event — analytics see <i>that</i> you saved an item, never <i>what</i> the item is. You can turn analytics back off at any time from <b>Settings → "Share usage analytics,"</b> which stops further collection. Analytics data is processed by Google under Google's privacy policy.</p>
+    <p>We do <b>not</b> send your inventory to analytics. Item names, photos, descriptions, specs, tags, notes, and the names of your areas and spots are <b>never</b> included in any analytics event — analytics see <i>that</i> you saved an item, never <i>what</i> the item is. You can turn analytics back off at any time from <b>Advanced Settings → "Share usage analytics,"</b> which stops further collection. Analytics data is processed by Google under Google's privacy policy.</p>
 
     <h3>Cloud backup to your own Google Drive (optional)</h3>
     <p>If you turn on cloud backup, the app copies your inventory (item text and photos) into a <b>private, app-specific folder in your own Google Drive</b> (the Drive "app data" area). This data lives in <b>your</b> Google account, under your control — we cannot see or access it, and it is not visible in your normal Drive file list. You can disconnect backup or delete the backup folder at any time from your Google account. This uses Google Drive, governed by Google's privacy policy.</p>
@@ -117,7 +117,8 @@
     <p>Store &amp; Forget shows ads after a number of free scans, unless you hold purchased scan credits. Ads are served by <b>Google AdMob</b>, which may collect and use a <b>device advertising ID</b> and related device/ad information to serve and measure ads. This data is processed by Google as an advertising partner. You can reset or limit your advertising ID in your device's Google settings. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a> and Google's privacy policy.</p>
 
     <h3>Scan-credit service (our server)</h3>
-    <p>To meter free and paid AI scans, the app talks to a small server we operate (a Cloudflare Worker). It receives your Firebase <b>user ID</b> to track how many scans your account has left, and the rewarded-ad reward callback that grants you credits. On paid/credit-backed scans it also receives the <b>item photo and text</b> for that scan and immediately forwards them to Google's Gemini API to produce the result — it does <b>not</b> store your photos or item text. We keep only a per-account scan/credit balance, not your inventory.</p>
+    <p>To meter free and paid scans, the app talks to a small server we operate (a Cloudflare Worker). It receives your Firebase <b>user ID</b> to track how many scans your account has left, and the rewarded-ad reward callback that grants you credits. On paid/credit-backed scans it also receives the <b>item photo and text</b> for that scan and immediately forwards them to Google's Gemini API to produce the result — it does <b>not</b> store your photos or item text. We keep only a per-account scan/credit balance, not your inventory.</p>
+    <p>When you are signed in, the app also sends this server anonymous <b>counts</b> of how many AI search-index operations your account has performed (plain numbers, grouped as search / save / re-index — <b>never</b> your item text, photos, or locations). This lets us keep the shared free AI tier healthy and detect abuse. These counts are sent whenever you are signed in, and are separate from the optional product analytics above (which stay off until you turn them on). Signed out, nothing is sent.</p>
 
     <h3>Buying scan credits (Google Play Billing)</h3>
     <p>If you buy a scan-credit pack, the purchase is handled by <b>Google Play Billing</b>. Google processes the payment; we receive a purchase confirmation (a token/event and the user ID it applies to) so we can add the credits to your balance. We do <b>not</b> receive your card number or other payment details.</p>
@@ -132,8 +133,8 @@
     <h2 id="delete-data">How to delete your data</h2>
     <p>Your inventory lives on your device for as long as you keep it there. You can delete it at any time:</p>
     <ul>
-      <li><b>Delete individual items, rooms, or storages</b> — use the delete actions inside the app on each item, room, or storage detail screen.</li>
-      <li><b>Erase everything in the app at once</b> — open <b>Settings → Data → Erase all data</b>. This wipes the local database (all rooms, storages, items) and removes every photo file from the app's private storage.</li>
+      <li><b>Delete individual items, areas, or spots</b> — use the delete actions inside the app on each item, area, or spot detail screen.</li>
+      <li><b>Erase everything in the app at once</b> — open <b>Advanced Settings → Erase all data</b>. This wipes the local database (all areas, spots, items) and removes every photo file from the app's private storage.</li>
       <li><b>Delete the app entirely</b> — uninstall Store &amp; Forget from your device. Android will remove the app's private storage, including the SQLite database and all attached photo files.</li>
       <li><b>Delete your cloud backup</b> — remove the app's data folder from your own Google Drive account.</li>
       <li><b>Delete your scan-credit balance</b> — the only data we hold on a server is your account's scan/credit balance; email us at the address below to have it removed.</li>
