@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms of Service — Store &amp; Forget</title>
+  <meta name="description" content="Terms of Service for Store & Forget, an Android home inventory app by Hyper Koala Studio.">
+  <style>
+    :root {
+      --fg: #1c1d22;
+      --muted: #555a66;
+      --accent: #2563eb;
+      --bg: #fafbfc;
+      --card: #ffffff;
+      --border: #e3e5ea;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #e7e9ee;
+        --muted: #9aa0ad;
+        --accent: #60a5fa;
+        --bg: #0f1115;
+        --card: #161922;
+        --border: #2a2f3c;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      padding: 32px 16px 64px;
+    }
+    main {
+      max-width: 740px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 36px 32px;
+    }
+    h1 { font-size: 28px; margin: 0 0 8px; letter-spacing: -0.2px; }
+    h2 { font-size: 18px; margin: 32px 0 8px; letter-spacing: -0.1px; }
+    h3 { font-size: 15px; margin: 20px 0 4px; letter-spacing: -0.1px; }
+    p, ul { margin: 10px 0; }
+    ul { padding-left: 22px; }
+    li { margin: 4px 0; }
+    a { color: var(--accent); }
+    .meta { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
+    .meta b { color: var(--fg); }
+    .footer { color: var(--muted); font-size: 13px; margin-top: 36px; text-align: center; }
+    code { background: rgba(127,127,127,0.12); padding: 1px 6px; border-radius: 4px; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Terms of Service — Store &amp; Forget</h1>
+    <div class="meta">
+      <div><b>Effective date:</b> 2026-07-26</div>
+      <div><b>App:</b> Store &amp; Forget (Android)</div>
+      <div><b>Operator:</b> Hyper Koala Studio</div>
+      <div><b>Contact:</b> <a href="mailto:hyperkoalastudio@gmail.com">hyperkoalastudio@gmail.com</a></div>
+      <div><b>Privacy policy:</b> <a href="../">rom3odelta.github.io/store-and-forget/</a></div>
+    </div>
+
+    <p>Welcome to Store &amp; Forget ("the App", "we", "us", or "our"). Please read these Terms of Service ("Terms") carefully before using the Store &amp; Forget mobile application or its associated cloud services.</p>
+    <p>By installing, accessing, or using Store &amp; Forget, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the App or its services.</p>
+
+    <h2>1. What the App is</h2>
+    <p><b>1.1 Your inventory lives on your device.</b> Store &amp; Forget is a mobile inventory tracker. The rooms, storages, and items you create — including the photos you attach and the text you write — are stored in a database in the App's private storage on your device. The App works offline for creating, editing, browsing, and searching your inventory by name.</p>
+    <p><b>1.2 Features that use the network.</b> Some features send data off your device:</p>
+    <ul>
+      <li><b>Smart Scan</b> sends the item photo and any text you have entered for that item to Google's Gemini API so it can suggest a name, description, and tags.</li>
+      <li><b>Search indexing</b> sends an item's text (name, description, specifications, tags, notes) to Google's embedding API when you save that item, so the App can build its semantic search index. This happens on every save, including when you are signed out.</li>
+      <li><b>Cloud Backup and Sync</b> copies your inventory into a private folder in your own Google Drive account.</li>
+      <li><b>Share &amp; Forget</b> uploads encrypted item data and photos to our infrastructure so other members of a shared inventory can receive them.</li>
+    </ul>
+    <p>These features rely on third-party cloud infrastructure, including Cloudflare Workers and R2, Firebase, and Google Gemini APIs. Our <a href="../">Privacy Policy</a> describes what each feature sends, when it sends it, and what is kept.</p>
+
+    <h2>2. In-app purchases and S&amp;F Credits</h2>
+    <p><b>2.1 Consumable credits.</b> Store &amp; Forget offers consumable in-app credit packages ("S&amp;F Credits") processed through Google Play Billing and RevenueCat.</p>
+    <p><b>2.2 Nature of credits.</b> S&amp;F Credits are single-use operational tokens. They are redeemed to execute an immediate server-side operation, such as AI vision processing, or to transport and host an encrypted shared inventory payload.</p>
+    <p><b>2.3 Credits are not a storage contract.</b> S&amp;F Credits do not constitute a contract, guarantee, or entitlement to perpetual, lifetime, or indefinite cloud storage. Spending a credit pays for the immediate service of processing, uploading, and delivering the data payload you requested, and that service is complete once delivered.</p>
+    <p><b>2.4 Non-refundable and non-transferable.</b> All purchases are final and non-refundable, except as required by applicable Google Play Store policies or by consumer protection laws that apply to you. Credits cannot be transferred between accounts or exchanged for money.</p>
+
+    <h2>3. Shared inventories and cloud storage</h2>
+    <p><b>3.1 The uploader pays.</b> In a shared inventory, the member who initiates an upload is responsible for funding it from their own S&amp;F Credits. No other member's balance is debited by your action.</p>
+    <p><b>3.2 Rate.</b> Uploading new shared item photos consumes S&amp;F Credits at the rate published in the App, currently one credit per three unique shared photo uploads. A photo already uploaded to that group is recognised as a duplicate and costs no credits.</p>
+    <p><b>3.3 We may change the terms of cloud services.</b> We reserve the right to alter credit consumption rates, storage quotas, and sync retention windows, and to move cloud sharing features to a recurring subscription.</p>
+    <p><b>3.4 Notice.</b> Before a material change to cloud storage policy or the availability of cloud sync, we will give at least thirty (30) days notice through in-app notifications or public release notes.</p>
+    <p><b>3.5 Your device data is not affected.</b> No change to, repricing of, or shutdown of the cloud sharing features will delete or alter the inventory stored on your own device. That data stays on your device and remains free to use.</p>
+
+    <h2>4. Backups and data loss</h2>
+    <p><b>4.1 Keeping backups is your responsibility.</b> Because your inventory lives on your device, you are responsible for maintaining backups of it, whether through the App's Google Drive backup or by other means.</p>
+    <p><b>4.2 No liability for loss.</b> We are not liable for loss, corruption, or destruction of inventory data caused by device loss or damage, hardware failure, uninstalling the App, clearing its data, or a third-party service outage.</p>
+
+    <h2>5. Third-party services and your own API key</h2>
+    <p><b>5.1 Third-party infrastructure.</b> The App depends on services operated by others, including Google Cloud, Cloudflare, Firebase, and RevenueCat. We are not responsible for interruptions caused by their outages or by changes to their policies.</p>
+    <p><b>5.2 Bring your own key.</b> If you supply your own Gemini API key, you are responsible for complying with Google's API terms, for keeping that key secure, and for any charges it incurs on your own Google account.</p>
+
+    <h2>6. Things you may not do</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Reverse engineer or decompile the App, or attempt to extract its source code or the workings of its API endpoints.</li>
+      <li>Bypass, tamper with, or manipulate credit accounting, authorization tokens, or other backend security mechanisms.</li>
+      <li>Upload, transmit, or share content that is illegal, harmful, or infringing, or that violates anyone else's rights.</li>
+    </ul>
+
+    <h2>7. Your statutory rights</h2>
+    <p>Nothing in these Terms limits or excludes any statutory right or consumer protection you have under the law of the country you live in that cannot lawfully be waived by agreement. Where these Terms conflict with such a right, that right prevails.</p>
+
+    <h2>8. Disclaimer of warranties</h2>
+    <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, STORE &amp; FORGET AND ITS CLOUD SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. WE DO NOT WARRANT THAT CLOUD SYNC WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE.</p>
+
+    <h2>9. Limitation of liability</h2>
+    <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL STORE &amp; FORGET, ITS DEVELOPERS, AFFILIATES, OR LICENSORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS, DATA, USE, OR GOODWILL.</p>
+    <p>OUR TOTAL AGGREGATE LIABILITY FOR ANY CLAIM ARISING OUT OF OR RELATING TO THESE TERMS OR YOUR USE OF THE APP SHALL NOT EXCEED THE TOTAL AMOUNT YOU ACTUALLY PAID US IN THE TWELVE (12) MONTHS BEFORE THE CLAIM AROSE.</p>
+
+    <h2>10. Governing law and disputes</h2>
+    <p><b>10.1 Governing law.</b> These Terms are governed by the laws of the Republic of the Philippines, without regard to its conflict of law rules.</p>
+    <p><b>10.2 Disputes.</b> We ask that you contact us first so we can try to resolve any dispute directly. If that fails, disputes shall be submitted to the competent courts of the Philippines. This does not affect any right you have under section 7 to bring proceedings in the courts of the country you live in.</p>
+
+    <h2>11. Changes to these Terms</h2>
+    <p>We may update these Terms as the App changes. When we do, we will update the effective date above, and for material changes to paid features or cloud services we will give the notice described in section 3.4.</p>
+
+    <h2>12. Contact</h2>
+    <p>Questions about these Terms can go to <a href="mailto:hyperkoalastudio@gmail.com">hyperkoalastudio@gmail.com</a>.</p>
+
+    <div class="footer">© 2026 Hyper Koala Studio · <a href="../">Privacy Policy</a></div>
+  </main>
+</body>
+</html>
