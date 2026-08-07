@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — Store &amp; Forget</title>
-  <meta name="description" content="Privacy policy for Store & Forget, a local-first Android home inventory app by Hyper Koala Studio.">
+  <meta name="description" content="Privacy policy for Store & Forget, an Android home inventory app by Hyper Koala Studio.">
+  <!-- Store & Forget privacy policy v1.7.0 -->
   <style>
     :root {
       --fg: #1c1d22;
@@ -57,20 +58,22 @@
   <main>
     <h1>Privacy Policy — Store &amp; Forget</h1>
     <div class="meta">
-      <div><b>Effective date:</b> 2026-06-28</div>
+      <div><b>Effective date:</b> 2026-08-07</div>
       <div><b>App:</b> Store &amp; Forget (Android)</div>
       <div><b>Operator:</b> Hyper Koala Studio</div>
       <div><b>Contact:</b> <a href="mailto:hyperkoalastudio@gmail.com">hyperkoalastudio@gmail.com</a></div>
     </div>
 
     <h2>What this app is</h2>
-    <p>Store &amp; Forget is a local-first Android inventory tracker that helps you remember where you put physical items in your home. You take a photo of something, optionally tag and describe it, and the app records which area and spot it went into. Your inventory lives on your device; the optional features below (AI, sign-in, ads, cloud backup, and buying scan credits) are the only times the app talks to a server.</p>
+    <p>Store &amp; Forget is an Android inventory tracker that helps you remember where you put physical items in your home. You take a photo of something, optionally tag and describe it, and the app records which area and spot it went into. Your inventory lives on your device by default. Everything that sends data anywhere — AI features, sign-in, ads, cloud backup, buying scan credits, and sharing an inventory with other people — is optional, and each one is described below.</p>
 
     <h2>Data we collect</h2>
     <p>The app collects only what you actively put into it:</p>
     <ul>
       <li><b>Photos</b> you take with the camera or pick from your photo library and attach to items.</li>
       <li><b>Text you type</b> — item names, descriptions, specifications, tags, notes, and the names you give to areas and spots.</li>
+      <li><b>Documents you attach to an item</b> — receipts, warranty cards, manuals, and other files (JPEG, PNG, WebP, HEIC, or PDF), together with the label you choose for each one.</li>
+      <li><b>Optional item details</b> — a price and currency, and an expiry or "use by" date.</li>
     </ul>
     <p>If you choose to sign in (see "Signing in" below), we also receive your <b>Google account email, name, and profile photo</b> from Google Sign-In, and the app is assigned a <b>user ID</b> that identifies your account to our scan-credit service.</p>
     <p>We do <b>not</b> collect:</p>
@@ -83,22 +86,56 @@
     </ul>
 
     <h2>Where your data is stored</h2>
-    <p>Everything you enter — photos, text, item records — is stored <b>locally on your device</b> inside the app's private storage area. There is no cloud database that we operate that holds your inventory, and there is no cross-device sync of your inventory through our servers. The optional cloud backup (below) goes to <b>your own</b> Google Drive, not to us.</p>
+    <p>Everything you enter — photos, attached documents, text, prices, dates, item records — is stored <b>locally on your device</b> inside the app's private storage area.</p>
+    <p>There are exactly two ways any of it leaves your device, and you have to turn on each one:</p>
+    <ul>
+      <li><b>Cloud backup</b> copies your inventory into <b>your own</b> Google Drive, not to us (see "Cloud backup" below).</li>
+      <li><b>Sharing an inventory</b> uploads the areas you choose to our servers, in encrypted form, so the people you invite can see them (see "Sharing an inventory" below).</li>
+    </ul>
+    <p>If you use neither, we hold no copy of your inventory at all.</p>
 
     <h2>Optional features that use the network</h2>
-    <p>The app works fully offline for manual entry, photos, browsing, and search-by-name. These features reach out over the network, and only when you use them:</p>
+    <p>The app works fully offline for manual entry, photos, attachments, browsing, and search-by-name. These features reach out over the network, and only when you use them:</p>
 
-    <h3>Smart Scan and search indexing (Google Gemini)</h3>
+    <h3>Smart Scan, quick snap, and search indexing (Google Gemini)</h3>
     <p>When the app's Smart features are active, the app sends data to Google's Gemini API:</p>
     <ul>
       <li><b>Auto-describe a scanned item (on tap):</b> when you tap "Smart Scan," the photo of the item plus any text you've already entered for that item is sent to Google's Gemini vision model so it can suggest a name, description, and tags. This happens only when you tap the scan button.</li>
-      <li><b>Search-index an item (automatic, on save):</b> when you save a new item or edit an existing one, the item's text (name, description, specs, tags, notes) is sent to Google's Gemini embedding model. The model returns a numerical search vector that the app stores locally on your device. The vector itself is meaningless without the original text and is stored only on your device.</li>
+      <li><b>Quick snap of a price or a date (on tap):</b> when you use the camera button beside the price or expiry-date field, the app takes a single photo of the price tag, receipt, or label, sends it to Google's Gemini vision model to read that one value, fills the field in, and then <b>deletes the photo from your device</b>. That photo is never added to your inventory and never becomes an attachment — if you want to keep the receipt, you attach it separately and deliberately.</li>
+      <li><b>Search-index an item (automatic, on save):</b> when you save a new item or edit an existing one, the item's text (name, description, specs, tags, notes) is sent to Google's Gemini embedding model. The model returns a numerical search vector that the app stores locally on your device. The vector itself is meaningless without the original text and is stored only on your device. <b>Prices, dates, and attached documents are not part of this text</b> and are never sent for indexing.</li>
       <li><b>Smart Find semantic search (on tap):</b> when you run a Smart Find search, your search query text is sent to Google's Gemini embedding model to produce a query vector. That vector is then compared locally, on your device, against the item vectors stored there — your inventory itself is never sent for the search, only the words you typed into the search box.</li>
     </ul>
-    <p>Free scans use an API key bundled in the app and call Google directly. If you buy scan credits (below) or are signed in and using server-provided scans, the same photo/text is instead routed through our scan-credit server (see "Scan-credit service") on its way to Google. Google's handling of data sent to the Gemini API is governed by <a href="https://policies.google.com/privacy">Google's privacy policy</a> and the <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms of service</a>.</p>
+    <p>Free scans use an API key bundled in the app and call Google directly. If you buy scan credits (below) or are signed in and using server-provided scans, the same photo/text is instead routed through our scan-credit server (see "Scan-credit service") on its way to Google. The app never uploads an attached document (a receipt, warranty card, or manual you added to an item) to Gemini or to anyone else. Google's handling of data sent to the Gemini API is governed by <a href="https://policies.google.com/privacy">Google's privacy policy</a> and the <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms of service</a>.</p>
+
+    <h3>Sharing an inventory with other people (Share &amp; Forget)</h3>
+    <p>Sharing is optional and off until you use it. It requires signing in. When you create a shared inventory, you choose <b>which areas</b> of your inventory it carries, and you invite people with a code or a QR code. Members you invite as viewers can see the shared inventory; members you invite as editors can also change it.</p>
+    <p><b>What leaves your device.</b> For the areas you put in the shared inventory, the app uploads to our servers, and makes available to every member of that group:</p>
+    <ul>
+      <li>the area and spot names and their structure,</li>
+      <li>item names, descriptions, specifications, tags, and notes,</li>
+      <li>expiry / "use by" dates on those items,</li>
+      <li><b>all photos on those items</b>, including brand and specification close-ups — not just cover photos.</li>
+    </ul>
+    <p><b>What deliberately stays on your device</b>, even for an item inside a shared inventory:</p>
+    <ul>
+      <li><b>prices and currencies</b> — these are removed before anything is uploaded,</li>
+      <li><b>attached documents</b> — receipts, warranty cards, and manuals are never uploaded to our servers or sent to other members,</li>
+      <li>everything in areas you did not put in the shared inventory,</li>
+      <li>the search vectors described above.</li>
+    </ul>
+    <p><b>Encryption.</b> The uploaded inventory snapshot and the photos are <b>encrypted on your device</b> before they are sent, with a key held only by the members of that group. Our servers store ciphertext and cannot read your items or view your photos. The display name you set for yourself is encrypted the same way. The encryption key is stored on your device and, so that you can get your shared inventories back on a new phone, a copy is saved in the same private <b>Google Drive app-data folder your backup uses</b> — in <b>your</b> Google account. We never receive the key.</p>
+    <p><b>What is not encrypted, and what we can see.</b> In plain terms, we can see:</p>
+    <ul>
+      <li><b>the name you give a shared inventory</b> — this is stored in <b>plain text</b> on our servers, because the server has to be able to list the inventory for you before you hold its key. Do not put anything private in the name.</li>
+      <li>which accounts are members of which group, and their roles,</li>
+      <li>how many photos and how many bytes have been uploaded, and when — we use this to bill shared uploads against your credit balance and to detect abuse.</li>
+    </ul>
+    <p><b>Where it is stored.</b> On Cloudflare (a Cloudflare Worker and Cloudflare R2 object storage), which processes it as our service provider.</p>
+    <p><b>Charging.</b> Uploading photos to a shared inventory spends the same credits as Smart Scans. The app tells you the price before an upload runs and never bills you silently.</p>
+    <p><b>Leaving, and deletion.</b> If you leave a shared inventory you were invited to, the app asks whether to keep the copy on your device or delete it, and either way your membership and the copy of the snapshot you had uploaded are removed from our server. If you own a shared inventory, you can stop sharing it, which removes it for everyone else. Encrypted photo blobs already uploaded to a group are <b>not</b> automatically erased from our storage — they stay so that a member joining later can still load the pictures. To have a group's stored data deleted outright, email us at the address at the bottom of this policy.</p>
 
     <h3>Signing in (Google Sign-In / Firebase Authentication)</h3>
-    <p>Signing in is optional. You only need an account to buy scan credits, to earn extra scans by watching a rewarded ad, or to back up your inventory to your Google Drive. When you sign in, Google Sign-In provides the app with your Google account's <b>email, name, and profile photo</b>, and Firebase Authentication issues a <b>user ID</b> that identifies your account to our scan-credit service. We do not receive your Google password. You can use the entire core app without ever signing in.</p>
+    <p>Signing in is optional. You need an account to buy scan credits, to earn extra scans by watching a rewarded ad, to back up your inventory to your Google Drive, or to share an inventory. When you sign in, Google Sign-In provides the app with your Google account's <b>email, name, and profile photo</b>, and Firebase Authentication issues a <b>user ID</b> that identifies your account to our scan-credit service. We do not receive your Google password. You can use the entire core app without ever signing in.</p>
 
     <h3>Usage analytics (optional — off unless you opt in)</h3>
     <p>To understand which features people use and where the app is rough, you can optionally share anonymous product analytics. This is <b>off by default</b>. It is available only when you are <b>signed in</b>, and only after you turn on <b>Advanced Settings → "Share usage analytics."</b> While you are signed out, no analytics are collected at all.</p>
@@ -108,36 +145,43 @@
       <li><b>Basic technical context</b> — your app version and general device/OS information.</li>
     </ul>
     <p>Each event is tied only to a <b>random, app-generated analytics instance ID</b>. We do <b>not</b> send your name, email, or account ID to analytics, and we never link these events to your identity.</p>
-    <p>We do <b>not</b> send your inventory to analytics. Item names, photos, descriptions, specs, tags, notes, and the names of your areas and spots are <b>never</b> included in any analytics event — analytics see <i>that</i> you saved an item, never <i>what</i> the item is. You can turn analytics back off at any time from <b>Advanced Settings → "Share usage analytics,"</b> which stops further collection. Analytics data is processed by Google under Google's privacy policy.</p>
+    <p>We do <b>not</b> send your inventory to analytics. Item names, photos, attached documents, descriptions, specs, tags, notes, prices, dates, and the names of your areas and spots are <b>never</b> included in any analytics event — analytics see <i>that</i> you saved an item, never <i>what</i> the item is. You can turn analytics back off at any time from <b>Advanced Settings → "Share usage analytics,"</b> which stops further collection. Analytics data is processed by Google under Google's privacy policy.</p>
 
     <h3>Cloud backup to your own Google Drive (optional)</h3>
-    <p>If you turn on cloud backup, the app copies your inventory (item text and photos) into a <b>private, app-specific folder in your own Google Drive</b> (the Drive "app data" area). This data lives in <b>your</b> Google account, under your control — we cannot see or access it, and it is not visible in your normal Drive file list. You can disconnect backup or delete the backup folder at any time from your Google account. This uses Google Drive, governed by Google's privacy policy.</p>
+    <p>If you turn on cloud backup, the app copies your inventory (item text and photos, and your attached documents if you leave that option on) into a <b>private, app-specific folder in your own Google Drive</b> (the Drive "app data" area). This data lives in <b>your</b> Google account, under your control — we cannot see or access it, and it is not visible in your normal Drive file list. You can disconnect backup or delete the backup folder at any time from your Google account. This uses Google Drive, governed by Google's privacy policy.</p>
 
     <h3>Ads (Google AdMob)</h3>
     <p>Store &amp; Forget shows ads after a number of free scans, unless you hold purchased scan credits. Ads are served by <b>Google AdMob</b>, which may collect and use a <b>device advertising ID</b> and related device/ad information to serve and measure ads. This data is processed by Google as an advertising partner. You can reset or limit your advertising ID in your device's Google settings. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a> and Google's privacy policy.</p>
 
     <h3>Scan-credit service (our server)</h3>
-    <p>To meter free and paid scans, the app talks to a small server we operate (a Cloudflare Worker). It receives your Firebase <b>user ID</b> to track how many scans your account has left, and the rewarded-ad reward callback that grants you credits. On paid/credit-backed scans it also receives the <b>item photo and text</b> for that scan and immediately forwards them to Google's Gemini API to produce the result — it does <b>not</b> store your photos or item text. We keep only a per-account scan/credit balance, not your inventory.</p>
+    <p>To meter free and paid scans, the app talks to a small server we operate (a Cloudflare Worker). It receives your Firebase <b>user ID</b> to track how many scans your account has left, and the rewarded-ad reward callback that grants you credits. On paid/credit-backed scans it also receives the <b>photo and text</b> for that scan — including the single photo of a price tag or expiry date when you use quick snap — and immediately forwards it to Google's Gemini API to produce the result. It does <b>not</b> store your photos or item text. We keep only a per-account scan/credit balance, not your inventory.</p>
     <p>When you are signed in, the app also sends this server anonymous <b>counts</b> of how many AI search-index operations your account has performed (plain numbers, grouped as search / save / re-index — <b>never</b> your item text, photos, or locations). This lets us keep the shared free AI tier healthy and detect abuse. These counts are sent whenever you are signed in, and are separate from the optional product analytics above (which stay off until you turn them on). Signed out, nothing is sent.</p>
+    <p>The same server handles shared inventories, as described under "Sharing an inventory" above — that is the one case where it stores content, and it stores it encrypted.</p>
 
     <h3>Buying scan credits (Google Play Billing)</h3>
     <p>If you buy a scan-credit pack, the purchase is handled by <b>Google Play Billing</b>. Google processes the payment; we receive a purchase confirmation (a token/event and the user ID it applies to) so we can add the credits to your balance. We do <b>not</b> receive your card number or other payment details.</p>
 
+    <h2>Notifications</h2>
+    <p>If you turn on reminders (for items you have lent out, or for items about to expire), the app schedules those notifications <b>on your device</b>. Nothing about them is sent to us or to anyone else, and no reminder is delivered through a server.</p>
+
     <h2>Permissions the app requests</h2>
     <ul>
-      <li><b>Camera</b> — to let you photograph items as you store them. Photos are saved to the app's private storage on your device.</li>
+      <li><b>Camera</b> — to let you photograph items as you store them, to photograph a document you want to attach, and to quick-snap a price tag or expiry date. Photos are saved to the app's private storage on your device; a quick-snap photo is deleted after it is read.</li>
       <li><b>Photos / Media library</b> — to let you attach existing photos from your library to an item.</li>
-      <li><b>Internet / network</b> — for the optional features above (AI, sign-in, ads, cloud backup, buying credits).</li>
+      <li><b>Files / documents</b> — to let you pick a receipt, warranty card, or manual from your device and attach it to an item. The app only reads the file you choose, and copies it into its own private storage; it does not browse or scan your files.</li>
+      <li><b>Notifications</b> — to deliver the optional lend and expiry reminders described above.</li>
+      <li><b>Internet / network</b> — for the optional features above (AI, sign-in, ads, cloud backup, sharing, buying credits).</li>
     </ul>
 
     <h2 id="delete-data">How to delete your data</h2>
     <p>Your inventory lives on your device for as long as you keep it there. You can delete it at any time:</p>
     <ul>
-      <li><b>Delete individual items, areas, or spots</b> — use the delete actions inside the app on each item, area, or spot detail screen.</li>
-      <li><b>Erase everything in the app at once</b> — open <b>Advanced Settings → Erase all data</b>. This wipes the local database (all areas, spots, items) and removes every photo file from the app's private storage.</li>
-      <li><b>Delete the app entirely</b> — uninstall Store &amp; Forget from your device. Android will remove the app's private storage, including the SQLite database and all attached photo files.</li>
+      <li><b>Delete individual items, areas, spots, or attachments</b> — use the delete actions inside the app on each detail screen. Deleting an attachment removes the file from your device, not just the entry.</li>
+      <li><b>Erase everything in the app at once</b> — open <b>Advanced Settings → Erase all data</b>. This wipes the local database (all areas, spots, items) and removes every photo and attached document from the app's private storage.</li>
+      <li><b>Delete the app entirely</b> — uninstall Store &amp; Forget from your device. Android will remove the app's private storage, including the SQLite database, all photo files, and all attached documents.</li>
       <li><b>Delete your cloud backup</b> — remove the app's data folder from your own Google Drive account.</li>
-      <li><b>Delete your scan-credit balance</b> — the only data we hold on a server is your account's scan/credit balance; email us at the address below to have it removed.</li>
+      <li><b>Leave or stop a shared inventory</b> — from the sharing screen. This removes your membership and your uploaded snapshot from our server; see "Sharing an inventory" above for what remains and how to have it erased.</li>
+      <li><b>Delete your scan-credit balance and any shared-inventory data we hold</b> — email us at the address below.</li>
     </ul>
 
     <h2>Children</h2>
@@ -147,7 +191,7 @@
     <p>If we materially change how the app collects, uses, or shares data, we will update this policy and update the in-app and Play Store listing references to it. The "Effective date" at the top reflects the most recent change.</p>
 
     <h2>Contact</h2>
-    <p>Questions about this policy, or requests to delete your account's scan-credit balance on our server, can go to <a href="mailto:hyperkoalastudio@gmail.com">hyperkoalastudio@gmail.com</a>.</p>
+    <p>Questions about this policy, or requests to delete data we hold for your account, can go to <a href="mailto:hyperkoalastudio@gmail.com">hyperkoalastudio@gmail.com</a>.</p>
 
     <div class="footer">© 2026 Hyper Koala Studio · <a href="terms/">Terms of Service</a></div>
   </main>
