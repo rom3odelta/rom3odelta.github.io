@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — Store &amp; Forget</title>
   <meta name="description" content="Privacy policy for Store & Forget, an Android home inventory app by Hyper Koala Studio.">
-  <!-- Store & Forget privacy policy v1.7.0 -->
+  <!-- Store & Forget privacy policy v1.8.0 -->
   <style>
     :root {
       --fg: #1c1d22;
@@ -58,7 +58,7 @@
   <main>
     <h1>Privacy Policy — Store &amp; Forget</h1>
     <div class="meta">
-      <div><b>Effective date:</b> 2026-08-07</div>
+      <div><b>Effective date:</b> 2026-08-12</div>
       <div><b>App:</b> Store &amp; Forget (Android)</div>
       <div><b>Operator:</b> Hyper Koala Studio</div>
       <div><b>Contact:</b> <a href="mailto:hyperkoalastudio@gmail.com">hyperkoalastudio@gmail.com</a></div>
@@ -105,7 +105,7 @@
       <li><b>Search-index an item (automatic, on save):</b> when you save a new item or edit an existing one, the item's text (name, description, specs, tags, notes) is sent to Google's Gemini embedding model. The model returns a numerical search vector that the app stores locally on your device. The vector itself is meaningless without the original text and is stored only on your device. <b>Prices, dates, and attached documents are not part of this text</b> and are never sent for indexing.</li>
       <li><b>Smart Find semantic search (on tap):</b> when you run a Smart Find search, your search query text is sent to Google's Gemini embedding model to produce a query vector. That vector is then compared locally, on your device, against the item vectors stored there — your inventory itself is never sent for the search, only the words you typed into the search box.</li>
     </ul>
-    <p>Free scans use an API key bundled in the app and call Google directly. If you buy scan credits (below) or are signed in and using server-provided scans, the same photo/text is instead routed through our scan-credit server (see "Scan-credit service") on its way to Google. The app never uploads an attached document (a receipt, warranty card, or manual you added to an item) to Gemini or to anyone else. Google's handling of data sent to the Gemini API is governed by <a href="https://policies.google.com/privacy">Google's privacy policy</a> and the <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms of service</a>.</p>
+    <p>Free scans use an API key bundled in the app and call Google directly. If you buy scan credits (below) or are signed in and using server-provided scans, the same photo/text is instead routed through our scan-credit server (see "Scan-credit service") on its way to Google. The app never uploads an attached document (a receipt, warranty card, or manual you added to an item) to Gemini. (Attached documents are only ever uploaded to our own servers, encrypted, and only if you turn on &quot;Share all photos and files&quot; for a shared inventory — see the sharing section below.) Google's handling of data sent to the Gemini API is governed by <a href="https://policies.google.com/privacy">Google's privacy policy</a> and the <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms of service</a>.</p>
 
     <h3>Sharing an inventory with other people (Share &amp; Forget)</h3>
     <p>Sharing is optional and off until you use it. It requires signing in. When you create a shared inventory, you choose <b>which areas</b> of your inventory it carries, and you invite people with a code or a QR code. Members you invite as viewers can see the shared inventory; members you invite as editors can also change it.</p>
@@ -114,12 +114,13 @@
       <li>the area and spot names and their structure,</li>
       <li>item names, descriptions, specifications, tags, and notes,</li>
       <li>expiry / "use by" dates on those items,</li>
-      <li><b>all photos on those items</b>, including brand and specification close-ups — not just cover photos.</li>
+      <li><b>one photo per item</b> — the item's first photo, the one you see in your lists.</li>
     </ul>
+    <p><b>"Share all photos and files" — off unless you turn it on.</b> There is a setting that widens what a shared inventory carries. With it <b>on</b>, the app also uploads <b>every other photo on those items</b> (extra shots, brand and specification close-ups) <b>and the documents you attached to them</b> — receipts, warranty cards, manuals. With it <b>off</b>, which is how it starts, none of those leave your device. These extra files are encrypted on your device in exactly the same way as everything else described below, and they cost credits to upload, so the app tells you what a sync will cost before it sends anything. Turning the setting back off stops future uploads; it does not remove files already sent to a group, and members who already received them keep their copies. If you were already sharing before this setting existed, your shared inventories used to carry every photo on an item; from now on they carry one per item unless you turn this setting on, and nothing that was already sent is taken back.</p>
     <p><b>What deliberately stays on your device</b>, even for an item inside a shared inventory:</p>
     <ul>
       <li><b>prices and currencies</b> — these are removed before anything is uploaded,</li>
-      <li><b>attached documents</b> — receipts, warranty cards, and manuals are never uploaded to our servers or sent to other members,</li>
+      <li><b>attached documents</b>, unless you turn on "Share all photos and files" above,</li>
       <li>everything in areas you did not put in the shared inventory,</li>
       <li>the search vectors described above.</li>
     </ul>
