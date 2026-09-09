@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Plotero Privacy Policy</title>
   <meta name="description" content="Privacy policy for Plotero, an Android app by Hyper Koala Studio that draws a land lot from its technical description.">
-  <!-- Plotero privacy policy v0.27 -->
+  <!-- Plotero privacy policy v0.29 -->
   <style>
     :root {
       --fg: #1c1d22;
@@ -58,7 +58,7 @@
   <main>
     <h1>Plotero Privacy Policy</h1>
     <div class="meta">
-      <div><b>Effective date:</b> 2026-09-06</div>
+      <div><b>Effective date:</b> 2026-09-09</div>
       <div><b>App:</b> Plotero (Android)</div>
       <div><b>Operator:</b> Hyper Koala Studio</div>
       <div><b>Contact:</b> <a href="mailto:hyperkoalastudio@gmail.com">hyperkoalastudio@gmail.com</a></div>
@@ -72,33 +72,35 @@
     <p>There is one thing that does leave your phone, and only when you ask for it: reading a title with Smart Scan. <a href="#what-plotero-sends">What Plotero sends</a> explains exactly what goes out and what comes back.</p>
     <p>There is an optional sign-in. You never have to use it. Every part of Plotero works signed out.</p>
 
-    <h2>What Plotero stores</h2>
+    <h2 id="what-plotero-stores">What Plotero stores</h2>
     <p>When you save a lot, Plotero writes it to your device's own app storage. A saved lot contains:</p>
     <ul>
       <li>the <b>bearings and distances</b> you entered, which is the technical description of the boundary;</li>
-      <li>the <b>tie line</b> and the designation of the monument it starts from, for example <code>BLLM No. 1</code>;</li>
+      <li>the <b>tie line</b> and the monument <b>as your title names it</b>, for example <code>BLLM No. 1, Mp. of Montalban, Rizal</code>;</li>
       <li>an optional <b>nickname you type yourself</b>, and the date you saved the lot;</li>
       <li>what the title says about itself, on the <b>Title details</b> sheet: the title number and type, the <b>registered owner's name</b>, the lot, block and plan numbers, the location, the area as printed, the survey dates and the adjoining lots;</li>
       <li>and, only if you pressed <b>Read the exact wording</b>, the verbatim technical description.</li>
     </ul>
     <p>From version 0.27, if you send somebody a map link, the words you chose to put on that link are saved with the lot so the next link says the same thing. They are your own words, so they are kept and backed up like a folder name is. Leave that box blank and nothing is stored.</p>
-    <p>From version 0.21 you can also sort saved lots into folders. The folder's name is whatever you typed. If you name one after a family, that name is stored on your phone and goes into your backup like anything else here. A folder holds no other information, and a folder name is never printed on an exported plan.</p>
+    <p>From version 0.21 you can also sort saved lots into folders. The folder's name is whatever you typed. If you name one after a family, that name is stored on your phone and goes into your backup like anything else here. A folder holds no other information.</p>
+    <p>From version 0.29 you can put several lots into one drawing, called a plot. Its name works the same way: whatever you typed, stored on your phone, in your backup. The only other thing a plot holds is where you dragged each lot, which is a distance north and east in metres, measured against the other lots on the same sheet. That is not a location on Earth and does not turn into one. Where your land actually sits comes from the map pin described below, and from nowhere else.</p>
     <p><b>Up to version 0.19 the second half of that list was not saved.</b> Those details were shown on screen and thrown away when you closed the lot, which meant photographing the same title twice to get a name back. From version 0.20 they are kept with the lot, so a lot in your library is a record of the paper rather than only of its shape. They are kept on your phone, and they are in your backup.</p>
     <p>They are still <b>not</b> printed on the PDF you export. A plan you send to somebody else carries the drawing, the measurements and the name you typed, and nothing that was printed on the title.</p>
+    <p>From version 0.29 a lot can be one of several on a drawing. If it is, the sheet also carries the other lots as outlines, each one's name, and a line per lot saying how it got where it is, plus the drawing's name if you gave it one. Those are all names you typed. Nothing off the title goes on it.</p>
     <p>You can read and correct all of it on the Title details sheet, and deleting the lot deletes it.</p>
 
     <h2>Backing up</h2>
     <p>Plotero offers two ways to keep a copy of your saved lots. Both are optional, and neither sends anything to us.</p>
     <p><b>To a file.</b> Plotero writes your saved lots to a <code>.json</code> file and hands it to you. Where it goes after that is entirely your business. This needs no account and works offline.</p>
     <p><b>To your own Google Drive.</b> If you sign in with Google, Plotero keeps a copy of your saved lots in your Drive. It asks for one permission, <code>drive.appdata</code>, which gives an app a private folder of its own inside your Drive and access to nothing else. Plotero cannot see, list or touch any other file you keep there. That folder is hidden from the normal Drive view; you can inspect or remove it from your Google account's settings for connected apps.</p>
-    <p>What goes into that copy is exactly what is on your phone: everything listed under <b>What Plotero stores</b>, including the title details, the registered owner's name and your folder names. From version 0.20 that is a real change: before it, a backup held only geometry and nicknames. If you would rather those details never left the phone, clear them on the Title details sheet, or do not sign in and use file backup instead. The photograph of a title is never part of a backup.</p>
+    <p>What goes into that copy is exactly what is on your phone: everything listed under <b>What Plotero stores</b>, including the title details, the registered owner's name and your folder and plot names. From version 0.20 that is a real change: before it, a backup held only geometry and nicknames. If you would rather those details never left the phone, clear them on the Title details sheet, or do not sign in and use file backup instead. The photograph of a title is never part of a backup.</p>
     <p>When you sign in, the app reads the email address and name on the account so it can show you which account it is backing up to. That stays on the device. Plotero stores no access token: it asks Android for a short-lived one at the moment it writes to Drive, and holds nothing afterwards.</p>
     <p>Google stores the backup, so Google's own privacy policy covers it while it sits there. We never see it.</p>
     <p>Restoring is always something you ask for. Plotero will not pull a backup down and overwrite what is on your phone on its own, and a restore only ever adds lots or updates ones you already have. It never deletes.</p>
     <p>Sign-in is available in the Android app. The web version has file backup only.</p>
 
     <h2 id="where-you-are">Where you are</h2>
-    <p>Two screens use your phone's location, and they do different things with it. Your phone asks for permission the first time you tap into one of them, and not before. Everything else — reading a title, drawing the lot, placing it on the map by hand, exporting — works with location refused, and will keep working that way.</p>
+    <p>Two screens use your phone's location, and they do different things with it. Your phone asks for permission the first time you tap into one of them, and not before. Everything else (reading a title, drawing the lot, placing it on the map by hand, exporting) works with location refused, and will keep working that way.</p>
     <p><b>Walkaround</b> shows where you are standing against a lot you have already placed. Your position draws the blue dot and works out how far you are from the boundary, and that is all it does. It is not saved with the lot, it is not put in your backup, and it is not sent anywhere. Close the screen and Plotero stops asking your phone where you are.</p>
     <p><b>Placing a lot from a corner</b> is the other one, and here your position is the thing you are asking to keep. You stand on a corner of the land, tell Plotero which corner it is, and that reading becomes where the lot sits on the map. So it is saved with the lot, exactly like a placement you make by hand, and it is in your backup if you make one. It still goes nowhere else: we have no copy of it.</p>
     <p>You can take the permission back at any time in Android's app settings. Only those two screens stop working, and a lot you already placed stays where you put it.</p>
@@ -128,9 +130,11 @@
 
     <h2>Changes to this policy</h2>
     <p>This policy is updated <b>before</b> the version it describes is released, and the app tells you what is being sent at the point you press the button. The effective date at the top refers to the current version of this policy.</p>
+    <p><b>8 September 2026.</b> Several lots can now go on one drawing, called a plot. A plot holds the name you typed and where you dragged each lot on the sheet, in metres, against the other lots. Export a lot that sits on a drawing and the sheet shows the others as outlines with their names, and says how each one was positioned. See <a href="#what-plotero-stores">What Plotero stores</a>. Nothing off the title is on it.</p>
+    <p><b>8 September 2026.</b> A saved lot now keeps the monument's whole name, as your title writes it: <code>BLLM No. 1, Mp. of Montalban, Rizal</code>, not just <code>BLLM No. 1</code>. Earlier versions cut it back before saving. The town and province are printed on your own title, they were never hidden from anyone else, and Plotero needs them to tell two markers of the same number apart.</p>
     <p><b>6 September 2026.</b> You can now place a lot by standing on one of its corners. The reading is saved with the lot as its position on the map, and is in your backup if you make one. See <a href="#where-you-are">Where you are</a>. It is not sent anywhere.</p>
     <p><b>6 September 2026.</b> Plotero can now use your phone's location on the Walkaround screen, to show where you are standing against a lot. The position stays on the phone. Nothing about this changes what is saved or backed up.</p>
-    <p><b>6 September 2026.</b> What a title says about itself — the title number, the registered owner's name, the plan number, the location, the survey dates, the adjoining lots — is now saved with the lot and included in your backup. Before this version it was shown on screen and discarded. A new button, <b>Read the exact wording</b>, fetches the verbatim technical description on request and saves that too. Nothing from a title is printed on an exported PDF, then or now.</p>
+    <p><b>6 September 2026.</b> What a title says about itself (the title number, the registered owner's name, the plan number, the location, the survey dates, the adjoining lots) is now saved with the lot and included in your backup. Before this version it was shown on screen and discarded. A new button, <b>Read the exact wording</b>, fetches the verbatim technical description on request and saves that too. Nothing from a title is printed on an exported PDF, then or now.</p>
     <p><b>30 August 2026.</b> Smart Scan replaced the older <b>Read this title</b>, which sent one page. Smart Scan sends every page of the open document, and the details it reads back now include the title number and the registered owner's name. See <a href="#what-plotero-sends">What Plotero sends</a>.</p>
 
     <h2>Contact</h2>
