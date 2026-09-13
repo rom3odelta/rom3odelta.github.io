@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plotero Terms of Service</title>
+  <meta name="description" content="Terms of Service for Plotero, an Android app by Hyper Koala Studio that draws a land lot from its technical description.">
+  <!-- Plotero terms of service v1 -->
+  <style>
+    :root {
+      --fg: #1c1d22;
+      --muted: #555a66;
+      --accent: #2563eb;
+      --bg: #fafbfc;
+      --card: #ffffff;
+      --border: #e3e5ea;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #e7e9ee;
+        --muted: #9aa0ad;
+        --accent: #60a5fa;
+        --bg: #0f1115;
+        --card: #161922;
+        --border: #2a2f3c;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      padding: 32px 16px 64px;
+    }
+    main {
+      max-width: 740px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 36px 32px;
+    }
+    h1 { font-size: 28px; margin: 0 0 8px; letter-spacing: -0.2px; }
+    h2 { font-size: 18px; margin: 32px 0 8px; letter-spacing: -0.1px; }
+    h3 { font-size: 15px; margin: 20px 0 4px; letter-spacing: -0.1px; }
+    p, ul { margin: 10px 0; }
+    ul { padding-left: 22px; }
+    li { margin: 4px 0; }
+    a { color: var(--accent); }
+    .meta { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
+    .meta b { color: var(--fg); }
+    .footer { color: var(--muted); font-size: 13px; margin-top: 36px; text-align: center; }
+    code { background: rgba(127,127,127,0.12); padding: 1px 6px; border-radius: 4px; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Plotero Terms of Service</h1>
+    <div class="meta">
+      <div><b>Effective date:</b> 2026-09-13</div>
+      <div><b>App:</b> Plotero (Android, and the web version)</div>
+      <div><b>Operator:</b> Hyper Koala Studio</div>
+      <div><b>Contact:</b> <a href="mailto:hyperkoalastudio@gmail.com">hyperkoalastudio@gmail.com</a></div>
+      <div><b>Privacy policy:</b> <a href="../">rom3odelta.github.io/plotero/</a></div>
+    </div>
+
+    <p>Welcome to Plotero ("the App", "we", "us", or "our"). Please read these Terms of Service ("Terms") before using the Plotero mobile application, its web version, or the reading service behind them.</p>
+    <p>By installing, accessing, or using Plotero, you agree to these Terms. If you do not agree, do not use the App.</p>
+
+    <h2 id="what-the-app-is">1. What the App is, and what it is not</h2>
+    <p><b>1.1 A drawing tool.</b> Plotero reads the technical description on a land title, the tie line from a monument and the bearing-and-distance legs that follow it, and draws the shape those numbers describe. It reports area, perimeter and closure error, and it can put that drawing over satellite imagery. Everything you save lives in a database in the App's private storage on your device.</p>
+    <p><b>1.2 Plotero is a visualization, not a survey.</b> This is the most important thing in these Terms. Every plot the App draws or exports carries the line <b>"Visualization only, not a certified survey"</b>, and that line is exact. Plotero does not perform a survey. It does not locate, verify, restore or place a single monument on the ground. It does not produce a document any registry, court, bank or government office is obliged to accept, and nothing it outputs is a substitute for work done and signed by a licensed Geodetic Engineer.</p>
+    <p><b>1.3 What the drawing depends on.</b> The shape is only ever as good as the numbers behind it. Those numbers come from a document you supply, read either by the App's scanner or typed in by you. Old titles carry typographical errors, transcription errors and descriptions that do not close. A scanner can misread a faint or skewed page. Plotero shows you the closure error precisely so you can see when something is off, but it cannot tell you whether the title itself is correct, current, authentic, or describes the land you think it does.</p>
+    <p><b>1.4 Decisions are yours.</b> Do not buy, sell, mortgage, subdivide, fence, build on, or bring a claim about land on the strength of a Plotero drawing. Have the property surveyed and have the title verified at the Registry of Deeds. You are responsible for how you use what the App shows you, and for anything you share with someone else.</p>
+    <p><b>1.5 It works offline, except where it does not.</b> Drawing, editing, browsing, measuring and exporting all run on your device with no network at all. Four things reach out, and only when you ask for them: reading a title, finding a printed line on the page, naming a document off its heading, and fetching satellite imagery for a plan sheet. The <a href="../">Privacy Policy</a> describes exactly what each one sends.</p>
+
+    <h2 id="the-reading-service">2. The reading service</h2>
+    <p><b>2.1 What it is.</b> Scanning a title sends the photograph to a service we operate, which passes it to Google's Gemini API and returns the numbers it read. The satellite plan sheet fetches map tiles through the same service. You do not need an account for any of it.</p>
+    <p><b>2.2 It is shared, and it is free.</b> That service is paid for by us and shared by everyone using the App. We run size caps and abuse limits on it, and we may change them. We may throttle or block use that is automated, abusive, or far outside normal use of the App.</p>
+    <p><b>2.3 No uptime promise.</b> The reading service can be slow, unavailable, or withdrawn. Nothing in these Terms is a guarantee that it will be running when you want it. If it is down, the App still draws, and you can still enter a description by hand, paste one, or import a CSV.</p>
+    <p><b>2.4 What it keeps.</b> Nothing. The service reads the page, returns the answer and stores no copy of your title, your photograph or the numbers in it. The <a href="../">Privacy Policy</a> sets this out in full.</p>
+
+    <h2 id="price">3. Price, and what can change</h2>
+    <p><b>3.1 Free.</b> Plotero is free to install and free to use. There are no in-app purchases, no subscription and no advertising in this release.</p>
+    <p><b>3.2 That may change later.</b> We may add paid features, a subscription, or advertising in a future version, and we may put limits on the reading service. Where a change is material we will say so in the release notes before it takes effect.</p>
+    <p><b>3.3 Your saved lots stay yours either way.</b> No price change, and no shutdown of the reading service, will delete, lock or alter the lots already saved on your device. They stay on your device, they stay exportable, and they stay free to use.</p>
+
+    <h2 id="backups">4. Backups and data loss</h2>
+    <p><b>4.1 Your data lives on your device.</b> Because of that, keeping a backup is your responsibility, whether by the App's export to a file, by its optional backup to your own Google Drive, or by some other means.</p>
+    <p><b>4.2 No liability for loss.</b> We are not liable for the loss, corruption or destruction of your saved lots caused by device loss or damage, hardware failure, uninstalling the App, clearing its data, or an outage at a third-party service.</p>
+    <p><b>4.3 Restoring.</b> A restore only ever happens because you asked for one. It adds lots or updates lots you already have, and never deletes.</p>
+
+    <h2 id="third-parties">5. Third-party services</h2>
+    <p><b>5.1 Who is involved.</b> The App depends on services operated by others: Google, for the vision model behind scanning and for Google Drive and Google sign-in if you use the backup; Cloudflare, for the service that sits between the App and those APIs; and Esri, which publishes the satellite imagery. We are not responsible for their outages or for changes to their own policies and terms.</p>
+    <p><b>5.2 Imagery.</b> The satellite imagery under a plan sheet is published by Esri and its data providers, and it is theirs, not ours. It is a picture, not a boundary, and it can be years old and offset from the ground. Never read a property line off it.</p>
+    <p><b>5.3 Google's terms apply to Google's part.</b> When the App uses Google sign-in and Google Drive, you are also using Google's services under Google's own terms and privacy policy.</p>
+
+    <h2 id="updates">6. Updates</h2>
+    <p>Plotero is updated through Google Play, and through Google Play only. The App does not download or install an application package itself, does not deliver code to itself over the air, and will never ask you to install anything from outside Google Play. Anything that does is not us.</p>
+
+    <h2 id="things-you-may-not-do">7. Things you may not do</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Reverse engineer or decompile the App, or attempt to extract its source code or the workings of its endpoints.</li>
+      <li>Use the reading service through anything other than the App, automate it, or call it at a volume no person would.</li>
+      <li>Bypass or tamper with size caps, abuse limits, or other backend controls.</li>
+      <li>Upload a document you have no right to, or use the App to process anyone's title or personal information without the right to do so.</li>
+      <li>Present a Plotero drawing as a survey, as a certified plan, or as the work of a licensed Geodetic Engineer, or remove the "Visualization only" line from anything you export or share.</li>
+    </ul>
+
+    <h2 id="statutory-rights">8. Your statutory rights</h2>
+    <p>Nothing in these Terms limits or excludes any statutory right or consumer protection you have under the law of the country you live in that cannot lawfully be waived by agreement. Where these Terms conflict with such a right, that right prevails.</p>
+
+    <h2 id="warranties">9. Disclaimer of warranties</h2>
+    <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, PLOTERO AND THE READING SERVICE ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</p>
+    <p>WE DO NOT WARRANT THAT ANY PLOT, AREA, PERIMETER, BEARING, DISTANCE, COORDINATE, CLOSURE FIGURE OR MAP POSITION PRODUCED BY THE APP IS ACCURATE, COMPLETE, CURRENT, OR FIT FOR ANY LEGAL, FINANCIAL OR CADASTRAL PURPOSE. WE DO NOT WARRANT THAT THE SCANNER READS ANY DOCUMENT CORRECTLY. WE DO NOT WARRANT THAT THE READING SERVICE WILL BE UNINTERRUPTED, TIMELY, SECURE OR ERROR-FREE.</p>
+
+    <h2 id="liability">10. Limitation of liability</h2>
+    <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL HYPER KOALA STUDIO, ITS DEVELOPERS, AFFILIATES OR LICENSORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS, DATA, USE OR GOODWILL, OR FOR ANY LOSS ARISING FROM A PROPERTY TRANSACTION, BOUNDARY DISPUTE, CONSTRUCTION DECISION OR VALUATION MADE IN RELIANCE ON THE APP.</p>
+    <p>OUR TOTAL AGGREGATE LIABILITY FOR ANY CLAIM ARISING OUT OF OR RELATING TO THESE TERMS OR YOUR USE OF THE APP SHALL NOT EXCEED THE GREATER OF THE TOTAL AMOUNT YOU ACTUALLY PAID US IN THE TWELVE (12) MONTHS BEFORE THE CLAIM AROSE, OR ONE THOUSAND PHILIPPINE PESOS (PHP 1,000).</p>
+
+    <h2 id="governing-law">11. Governing law and disputes</h2>
+    <p><b>11.1 Governing law.</b> These Terms are governed by the laws of the Republic of the Philippines, without regard to its conflict of law rules.</p>
+    <p><b>11.2 Disputes.</b> Please contact us first so we can try to settle any dispute directly. If that fails, disputes shall be submitted to the competent courts of the Philippines. This does not affect any right you have under section 8 to bring proceedings in the courts of the country you live in.</p>
+
+    <h2 id="changes">12. Changes to these Terms</h2>
+    <p>We may update these Terms as the App changes. When we do, we will change the effective date above. Material changes to price, to the reading service, or to what the App sends will also appear in the release notes.</p>
+
+    <h2 id="contact">13. Contact</h2>
+    <p>Questions about these Terms can go to <a href="mailto:hyperkoalastudio@gmail.com">hyperkoalastudio@gmail.com</a>.</p>
+
+    <div class="footer">&copy; 2026 Hyper Koala Studio &middot; <a href="../">Privacy Policy</a></div>
+  </main>
+</body>
+</html>
