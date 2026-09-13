@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Plotero Privacy Policy</title>
   <meta name="description" content="Privacy policy for Plotero, an Android app by Hyper Koala Studio that draws a land lot from its technical description.">
-  <!-- Plotero privacy policy v0.29 -->
+  <!-- Plotero privacy policy v0.43 -->
   <style>
     :root {
       --fg: #1c1d22;
@@ -58,7 +58,7 @@
   <main>
     <h1>Plotero Privacy Policy</h1>
     <div class="meta">
-      <div><b>Effective date:</b> 2026-09-09</div>
+      <div><b>Effective date:</b> 2026-09-13</div>
       <div><b>App:</b> Plotero (Android)</div>
       <div><b>Operator:</b> Hyper Koala Studio</div>
       <div><b>Contact:</b> <a href="mailto:hyperkoalastudio@gmail.com">hyperkoalastudio@gmail.com</a></div>
@@ -69,7 +69,7 @@
 
     <h2>In short</h2>
     <p><b>Plotero collects nothing about you.</b> Everything you type and everything Plotero draws stays on your phone, unless you choose to back it up. A backup goes to storage you already own, not to us.</p>
-    <p>There is one thing that does leave your phone, and only when you ask for it: reading a title with Smart Scan. <a href="#what-plotero-sends">What Plotero sends</a> explains exactly what goes out and what comes back.</p>
+    <p>A few things do leave your phone, and each one only when you ask for it: reading a title, finding a printed line on the page, naming a document off its heading, and putting satellite imagery under a drawing. <a href="#what-plotero-sends">What Plotero sends</a> explains exactly what goes out and what comes back.</p>
     <p>There is an optional sign-in. You never have to use it. Every part of Plotero works signed out.</p>
 
     <h2 id="what-plotero-stores">What Plotero stores</h2>
@@ -100,11 +100,14 @@
     <p>Sign-in is available in the Android app. The web version has file backup only.</p>
 
     <h2 id="where-you-are">Where you are</h2>
-    <p>Two screens use your phone's location, and they do different things with it. Your phone asks for permission the first time you tap into one of them, and not before. Everything else (reading a title, drawing the lot, placing it on the map by hand, exporting) works with location refused, and will keep working that way.</p>
+    <p>Three things in Plotero use your phone's location, and they do different things with it. Your phone asks for permission the first time you tap into one of them, and not before. Everything else (reading a title, drawing the lot, browsing the map, searching, placing it on the map by hand, exporting) works with location refused, and will keep working that way.</p>
     <p><b>Walkaround</b> shows where you are standing against a lot you have already placed. Your position draws the blue dot and works out how far you are from the boundary, and that is all it does. It is not saved with the lot, it is not put in your backup, and it is not sent anywhere. Close the screen and Plotero stops asking your phone where you are.</p>
     <p><b>Placing a lot from a corner</b> is the other one, and here your position is the thing you are asking to keep. You stand on a corner of the land, tell Plotero which corner it is, and that reading becomes where the lot sits on the map. So it is saved with the lot, exactly like a placement you make by hand, and it is in your backup if you make one. It still goes nowhere else: we have no copy of it.</p>
-    <p>You can take the permission back at any time in Android's app settings. Only those two screens stop working, and a lot you already placed stays where you put it.</p>
+    <p><b>Find properties near me</b>, the target button on the Map tab, is the third. It reads your position once, marks which of your own properties are close to it, and moves the map. The reading is not saved with anything and is not in your backup; the next time you press the button it asks your phone again.</p>
+    <p>You can take the permission back at any time in Android's app settings. Only those three things stop working, and a lot you already placed stays where you put it.</p>
+    <p><b>A property entrance</b> is a point you choose by hand, not a reading from your phone. You drag the map until a pin sits on the gate or the road access, and Plotero keeps it so directions lead there instead of to the middle of the field. It is saved with the lot and it is in your backup if you make one, the same as a placement. It goes nowhere else, and you can remove it.</p>
     <p><b>Sending a map link</b> puts the lot's location in a message you write to somebody else. Nothing about that reaches us; it is your phone's own share sheet handing the text to whichever app you pick, and where it goes after that is between you and them. Before it is sent you are shown the exact message and can change every word of it, which is there so a link can go out without the name you file the lot under. The link points at the middle of the lot and carries no title number, no owner name and nothing else off the paper.</p>
+    <p><b>Making a satellite plan</b> sends where the land is, because there is no other way to fetch a picture of it. It goes to Plotero's reader and on to the company that publishes the imagery, as a square of map and nothing else: no name, no title number, nothing saying whose land it is or who asked for it. See <a href="#what-plotero-sends">What Plotero sends</a>.</p>
 
     <h2 id="what-plotero-sends">What Plotero sends</h2>
     <p><b>Your saved lots are never sent to us, with or without an account.</b> Nothing Plotero has drawn or stored on your phone leaves it on its own.</p>
@@ -113,12 +116,16 @@
     <p>There is one button that changes that. <b>Read the exact wording</b>, on the Title details sheet, sends the pages a second time and asks for that paragraph word for word. It is off unless you press it, it is the only way that text reaches the app, and what comes back is saved with the lot like the rest of the details.</p>
     <p>Plotero's reader keeps none of it either way: it reads the page, hands the answer back, and holds nothing. Nothing from a scan is stored on our side.</p>
     <p>The page you send is not stored, not by us and not as a copy anywhere on our side. We count how many reads happened and how long they took, so we can tell when the reader is broken. That count holds nothing about you or about the document, not even a fingerprint of it. Google's handling of the page is covered by Google's own terms; what they receive is the image, and nothing that says who you are.</p>
-    <p>If you never press Smart Scan, no page is ever sent, and the rest of the app works with the phone in airplane mode.</p>
+    <p><b>Tapping a line to find it on the paper</b> sends that page as well. On a lot read from a title, tapping a side highlights the row that describes it, and the only way to know where that row is printed is to let the reader look. Same reader, same rule: it answers and holds nothing. It happens once per page, and the answer is kept on your phone, so tapping the same row again sends nothing.</p>
+    <p><b>Naming a document by dragging a box over its heading</b> sends the piece you boxed and only that piece, to read the words inside it. The heading comes back as the file's name. Nothing else on the page goes with it.</p>
+    <p><b>A satellite plan sends the patch of ground it is a picture of.</b> The second sheet, the one with the land under the drawing, needs squares of imagery that cover your lot. Plotero asks its own reader for them and the reader fetches them from Esri, who publish the pictures. Asking for a square of the map says where that square is, and for this sheet that is where your land is. It carries nothing else with it, nothing is kept on our side, and Esri are handed a map coordinate the same way any map app hands them one.</p>
+    <p>If you never press any of those, nothing is ever sent, and the rest of the app works with the phone in airplane mode.</p>
     <p>The only other thing Plotero may send is a request for a small file asking whether a newer version of the app exists, and only in builds where that check is switched on. That request carries no information about you or your lots. Like any request to a website it reveals your device's IP address and which version you are running, and nothing is stored about it.</p>
 
     <h2>Third parties</h2>
     <p>Plotero contains no advertising, no analytics, and no third-party tracking libraries.</p>
-    <p>Google is involved in two ways, and neither one happens unless you start it. If you sign in, your backup is kept in your own Google Drive. If you press Smart Scan, the page you are reading goes to Google's document-reading service. Nothing else about you reaches anyone else.</p>
+    <p>Google is involved in two ways, and neither one happens unless you start it. If you sign in, your backup is kept in your own Google Drive. If you press Smart Scan, or tap a line to find it, or box a heading to name a file, the page goes to Google's document-reading service.</p>
+    <p>Esri is the third, and the same rule holds. Make a satellite plan and the map squares it needs are fetched from them, through us. Nothing else about you reaches anyone else.</p>
 
     <h2 id="delete-data">Your control</h2>
     <p>Saved lots are removed when you delete them in the app, or when you uninstall Plotero.</p>
@@ -130,6 +137,9 @@
 
     <h2>Changes to this policy</h2>
     <p>This policy is updated <b>before</b> the version it describes is released, and the app tells you what is being sent at the point you press the button. The effective date at the top refers to the current version of this policy.</p>
+    <p><b>13 September 2026.</b> A property you have placed on the map can have a second plan with satellite imagery under the drawing. Making one sends the map squares it covers, which is where the land is and nothing else, to Plotero's reader and on to Esri, who publish the pictures. See <a href="#what-plotero-sends">What Plotero sends</a> and <a href="#where-you-are">Where you are</a>.</p>
+    <p><b>13 September 2026.</b> This policy now also describes two smaller things that were already sending a page and were not written down here. Tapping a line to highlight it on the paper, and naming a document by boxing its heading, both go the same way as Smart Scan, and nothing is kept.</p>
+    <p><b>13 September 2026.</b> Two things this policy had missed are now in it: the target button on the Map tab, which reads your position once to mark which of your own properties are near you, and the entrance pin, which is a point you drag by hand and is saved with the lot. See <a href="#where-you-are">Where you are</a>.</p>
     <p><b>8 September 2026.</b> Several lots can now go on one drawing, called a plot. A plot holds the name you typed and where you dragged each lot on the sheet, in metres, against the other lots. Export a lot that sits on a drawing and the sheet shows the others as outlines with their names, and says how each one was positioned. See <a href="#what-plotero-stores">What Plotero stores</a>. Nothing off the title is on it.</p>
     <p><b>8 September 2026.</b> A saved lot now keeps the monument's whole name, as your title writes it: <code>BLLM No. 1, Mp. of Montalban, Rizal</code>, not just <code>BLLM No. 1</code>. Earlier versions cut it back before saving. The town and province are printed on your own title, they were never hidden from anyone else, and Plotero needs them to tell two markers of the same number apart.</p>
     <p><b>6 September 2026.</b> You can now place a lot by standing on one of its corners. The reading is saved with the lot as its position on the map, and is in your backup if you make one. See <a href="#where-you-are">Where you are</a>. It is not sent anywhere.</p>
