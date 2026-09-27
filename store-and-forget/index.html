@@ -57,7 +57,7 @@
   <main>
     <h1>Privacy Policy — Store &amp; Forget</h1>
     <div class="meta">
-      <div><b>Effective date:</b> 2026-09-16</div>
+      <div><b>Effective date:</b> 2026-09-27</div>
       <div><b>App:</b> Store &amp; Forget (Android)</div>
       <div><b>Operator:</b> Hyper Koala Studio</div>
       <div><b>Contact:</b> <a href="mailto:privacy@hyperkoalastudio.com">privacy@hyperkoalastudio.com</a></div>
@@ -74,7 +74,7 @@
       <li><b>Documents you attach to an item</b> — receipts, warranty cards, manuals, and other files (JPEG, PNG, WebP, HEIC, or PDF), together with the label you choose for each one.</li>
       <li><b>Optional item details</b> — a price and currency, and an expiry or "use by" date.</li>
     </ul>
-    <p>If you choose to sign in (see "Signing in" below), we also receive your <b>Google account email, name, and profile photo</b> from Google Sign-In, and the app is assigned a <b>user ID</b> that identifies your account to our scan-credit service.</p>
+    <p>If you choose to sign in (see "Signing in" below), we also receive your <b>Google account email, name, and profile photo</b> from Google Sign-In, and the app is assigned a <b>user ID</b> that identifies your account to our scan-credit service. If you unlock something for free, our server keeps your email address with that record (see "Free unlocks" under "Using your own Gemini API key").</p>
     <p>We do <b>not</b> collect:</p>
     <ul>
       <li>Your location.</li>
@@ -120,9 +120,11 @@
       <li><b>We never receive it.</b> The key is only ever attached to requests the app sends directly to Google at <code>https://generativelanguage.googleapis.com</code>. It appears in no request to any server we operate.</li>
       <li><b>Your scans skip our server entirely.</b> While your own key is active, the photo and text for a scan travel straight from your device to Google. Our scan-credit server is not in the path, so we do not receive, forward, or see the contents of those scans, and we cannot count them.</li>
       <li><b>Google meters and bills those calls against your own Google account</b>, under Google's Gemini API terms. What Google does with what you send it is covered by <a href="https://policies.google.com/privacy">Google's privacy policy</a>; we are not a party to that exchange.</li>
+      <li><b>On a free Gemini key, Google may use what you scan.</b> Under Google's Gemini API terms, what you send on a free key can be used to improve Google's products, and people at Google may review it. Keys on a paid Google plan are treated differently. The <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms</a> have the details.</li>
       <li><b>You can remove the key at any time</b> using "Clear" on that screen, which deletes it from your device. Scans then fall back to the app's own allowance.</li>
     </ul>
-    <p><b>Why the app asks you to sign in for this.</b> Bringing your own key is normally a paid unlock, and the unlock is held against your Google account rather than against a particular handset, so it survives a reinstall or a new phone. Signing in is how the app attaches the unlock to an account. The request that does this records exactly one thing on our server — that this account holds the unlock — and carries no other content and never your key.</p>
+    <p><b>Why the app asks you to sign in for this.</b> Bringing your own key is normally a paid unlock, and the unlock is held against your Google account rather than against a particular handset, so it survives a reinstall or a new phone. Signing in is how the app attaches the unlock to an account. Our server records that this account holds the unlock and when it got it. The request carries no other content and never your key.</p>
+    <p><b>Free unlocks.</b> If you unlock something for free, with a hidden gesture or a code, our server also records your user ID, your account's email address, what was unlocked, and when. Paid unlocks aren't part of this record. We use it to spot abuse, and it's never used for marketing. It's deleted with the rest of your account's data when you ask (see "How to delete your data").</p>
 
     <h3>Sharing an inventory with other people (Share &amp; Forget)</h3>
     <p>Sharing is optional and off until you use it. It requires signing in. When you create a shared inventory, you choose <b>which areas</b> of your inventory it carries, and you invite people with a code or a QR code. Members you invite as viewers can see the shared inventory; members you invite as editors can also change it.</p>
@@ -172,12 +174,12 @@
     <p>Store &amp; Forget shows ads after a number of free scans, unless you hold purchased scan credits. Ads are served by <b>Google AdMob</b>, which may collect and use a <b>device advertising ID</b> and related device/ad information to serve and measure ads. This data is processed by Google as an advertising partner. You can reset or limit your advertising ID in your device's Google settings. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a> and Google's privacy policy.</p>
 
     <h3>Scan-credit service (our server)</h3>
-    <p>To meter free and paid scans, the app talks to a small server we operate (a Cloudflare Worker). It receives your Firebase <b>user ID</b> to track how many scans your account has left, and the rewarded-ad reward callback that grants you credits. On paid/credit-backed scans it also receives the <b>photo and text</b> for that scan — including the single photo of a price tag or expiry date when you use quick snap — and immediately forwards it to Google's Gemini API to produce the result. It does <b>not</b> store your photos or item text. We keep only a per-account scan/credit balance, not your inventory.</p>
+    <p>To meter free and paid scans, the app talks to a small server we operate (a Cloudflare Worker). It receives your Firebase <b>user ID</b> to track how many scans your account has left, and the rewarded-ad reward callback that grants you credits. On paid/credit-backed scans it also receives the <b>photo and text</b> for that scan — including the single photo of a price tag or expiry date when you use quick snap — and immediately forwards it to Google's Gemini API to produce the result. It does <b>not</b> store your photos or item text. We keep a per-account scan/credit balance, not your inventory. The same server keeps the free-unlock records described under "Using your own Gemini API key".</p>
     <p>When you are signed in, search indexing and Smart Find go through this server too. It receives the item text you saved, or the words you typed into the search box, passes them to Google's embedding model, and hands back the search vector. It does <b>not</b> store them. Alongside that it keeps anonymous <b>counts</b> of how many of these operations your account has performed (plain numbers, grouped as search / save / re-index), which is what lets us keep the shared free AI tier healthy and detect abuse. Those counts carry no item text, photos, or locations. Signed out, or on your own API key, none of this reaches us — the indexing call goes straight to Google.</p>
     <p>The same server handles shared inventories, as described under "Sharing an inventory" above — that is the one case where it stores content, and it stores it encrypted.</p>
 
-    <h3>Buying scan credits (Google Play Billing)</h3>
-    <p>If you buy a scan-credit pack, the purchase is handled by <b>Google Play Billing</b>. Google processes the payment; we receive a purchase confirmation (a token/event and the user ID it applies to) so we can add the credits to your balance. We do <b>not</b> receive your card number or other payment details.</p>
+    <h3>Buying scan credits or an unlock (Google Play Billing)</h3>
+    <p>If you buy a scan-credit pack or a one-time unlock, such as Remove ads or Fire &amp; Forget, the purchase is handled by <b>Google Play Billing</b>. Google processes the payment. <b>RevenueCat</b>, which manages purchases for us as our service provider, receives your user ID from the app and the purchase details from Google Play. We receive a purchase confirmation so we can add the credits to your balance or turn the unlock on for your account, and we keep which unlocks your account holds and when it got them. We do <b>not</b> receive your card number or other payment details.</p>
 
     <h2>How the app updates itself</h2>
     <p>Store &amp; Forget updates over two channels, and neither one asks you to install anything from outside Google Play:</p>
@@ -207,7 +209,7 @@
       <li><b>Delete the app entirely</b> — uninstall Store &amp; Forget from your device. Android will remove the app's private storage, including the SQLite database, all photo files, and all attached documents.</li>
       <li><b>Delete your cloud backup</b> — remove the app's data folder from your own Google Drive account.</li>
       <li><b>Leave or stop a shared inventory</b> — from the sharing screen. This removes your membership and your uploaded snapshot from our server; see "Sharing an inventory" above for what remains and how to have it erased.</li>
-      <li><b>Delete your scan-credit balance and any shared-inventory data we hold</b> — email us at the address below.</li>
+      <li><b>Delete what our server holds for your account</b> (your scan-credit balance, unlock records, and any shared-inventory data): email us at the address below.</li>
     </ul>
 
     <h2>Children</h2>
