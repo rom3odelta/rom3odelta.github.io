@@ -57,7 +57,7 @@
   <main>
     <h1>Terms of Service — Store &amp; Forget</h1>
     <div class="meta">
-      <div><b>Effective date:</b> 2026-08-21</div>
+      <div><b>Effective date:</b> 2026-09-29</div>
       <div><b>App:</b> Store &amp; Forget (Android)</div>
       <div><b>Operator:</b> Hyper Koala Studio</div>
       <div><b>Contact:</b> <a href="mailto:support-storeandforget@hyperkoalastudio.com">support-storeandforget@hyperkoalastudio.com</a></div>
@@ -74,7 +74,7 @@
       <li><b>Smart Scan</b> sends the item photo and any text you have entered for that item to Google's Gemini API so it can suggest a name, description, and tags.</li>
       <li><b>Search indexing</b> sends an item's text (name, description, specifications, tags, notes) to Google's embedding API when you save that item, so the App can build its semantic search index. This happens on every save, including when you are signed out.</li>
       <li><b>Cloud Backup and Sync</b> copies your inventory into a private folder in your own Google Drive account.</li>
-      <li><b>Share &amp; Forget</b> uploads encrypted item data and photos to our infrastructure so other members of a shared inventory can receive them.</li>
+      <li><b>Share &amp; Forget</b> shares the areas you choose through the Google Drive of the person sharing them. <b>Share &amp; Forget Classic</b> uploads encrypted item data and photos to our infrastructure so other members of a shared inventory can receive them.</li>
     </ul>
     <p>These features rely on third-party cloud infrastructure, including Cloudflare Workers and R2, Firebase, and Google Gemini APIs. Our <a href="../">Privacy Policy</a> describes what each feature sends, when it sends it, and what is kept.</p>
 
@@ -83,8 +83,11 @@
     <p><b>2.2 Nature of credits.</b> S&amp;F Credits are single-use operational tokens. They are redeemed to execute an immediate server-side operation, such as AI vision processing, or to transport and host an encrypted shared inventory payload.</p>
     <p><b>2.3 Credits are not a storage contract.</b> S&amp;F Credits do not constitute a contract, guarantee, or entitlement to perpetual, lifetime, or indefinite cloud storage. Spending a credit pays for the immediate service of processing, uploading, and delivering the data payload you requested, and that service is complete once delivered.</p>
     <p><b>2.4 Non-refundable and non-transferable.</b> All purchases are final and non-refundable, except as required by applicable Google Play Store policies or by consumer protection laws that apply to you. Credits cannot be transferred between accounts or exchanged for money.</p>
+    <p><b>2.5 One-time unlocks.</b> Some features are one-time purchases through Google Play, such as Remove ads, Unlimited own key, Fire &amp; Forget, Share &amp; Forget, or a bundle of them. An unlock is tied to your account, not to one phone. Section 2.4 applies to unlocks too.</p>
+    <p><b>2.6 Free unlocks and their limits.</b> Some unlocks are free, such as using your own Gemini API key. A free unlock can come with a usage limit, like a daily number of scans, which the App shows you. We may change a free limit, and we may withdraw a free unlock from an account that abuses it. Where a paid unlock removes a limit, the App says so before you buy.</p>
 
     <h2>3. Shared inventories and cloud storage</h2>
+    <p>Sections 3.1 and 3.2 apply to Share &amp; Forget Classic. Share &amp; Forget, which shares through your own Google Drive, is a one-time unlock bought by the person who shares. The people they invite don't pay, and the shared files use the sharer's Drive storage.</p>
     <p><b>3.1 The uploader pays.</b> In a shared inventory, the member who initiates an upload is responsible for funding it from their own S&amp;F Credits. No other member's balance is debited by your action.</p>
     <p><b>3.2 Rate.</b> Uploading new shared item photos consumes S&amp;F Credits at the rate published in the App, currently one credit per three unique shared photo uploads. A photo already uploaded to that group is recognised as a duplicate and costs no credits.</p>
     <p><b>3.3 We may change the terms of cloud services.</b> We reserve the right to alter credit consumption rates, storage quotas, and sync retention windows, and to move cloud sharing features to a recurring subscription.</p>
@@ -98,7 +101,7 @@
     <h2>5. Third-party services and your own API key</h2>
     <p><b>5.1 Third-party infrastructure.</b> The App depends on services operated by others, including Google Cloud, Cloudflare, Firebase, and RevenueCat. We are not responsible for interruptions caused by their outages or by changes to their policies.</p>
     <p><b>5.2 Bring your own key.</b> If you supply your own Gemini API key, you are responsible for complying with Google's API terms, for keeping that key secure, and for any charges it incurs on your own Google account.</p>
-    <p><b>5.3 What we do with a key you supply.</b> Your key is held only on your device, in the operating system's encrypted key store. We never receive it: it is attached only to requests the App sends directly to Google, and it is not sent to our servers, not included in your cloud backup, and not included in analytics. While your own key is in use, the content of those scans goes straight from your device to Google and does not pass through our servers. You can delete the key from the App at any time. See the Privacy Policy, "Using your own Gemini API key," for the full description.</p>
+    <p><b>5.3 What we do with a key you supply.</b> Your key is held only on your device, in the operating system's encrypted key store. We never receive it: it is attached only to requests the App sends directly to Google, and it is not sent to our servers, not included in your cloud backup, and not included in analytics. While your own key is in use, the content of those scans goes straight from your device to Google and does not pass through our servers. When you're signed in, the App does tell our servers how many scans you ran on your key, and on which day, so the limit in 2.6 can apply to your account. It never sends what you scanned. You can delete the key from the App at any time. See the Privacy Policy, "Using your own Gemini API key," for the full description.</p>
     <p><b>5.4 Updates to the App.</b> The App receives updates two ways: through Google Play, and as over-the-air JavaScript updates delivered by Expo (EAS Update), which is the standard update mechanism for React Native apps. An over-the-air update changes the App's JavaScript only — it cannot add native code and cannot add or change an Android permission. The App never downloads or installs an application package itself and never asks you to install one from outside Google Play.</p>
 
     <h2>6. Things you may not do</h2>

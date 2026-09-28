@@ -57,7 +57,7 @@
   <main>
     <h1>Privacy Policy — Store &amp; Forget</h1>
     <div class="meta">
-      <div><b>Effective date:</b> 2026-09-27</div>
+      <div><b>Effective date:</b> 2026-09-29</div>
       <div><b>App:</b> Store &amp; Forget (Android)</div>
       <div><b>Operator:</b> Hyper Koala Studio</div>
       <div><b>Contact:</b> <a href="mailto:privacy@hyperkoalastudio.com">privacy@hyperkoalastudio.com</a></div>
@@ -74,7 +74,7 @@
       <li><b>Documents you attach to an item</b> — receipts, warranty cards, manuals, and other files (JPEG, PNG, WebP, HEIC, or PDF), together with the label you choose for each one.</li>
       <li><b>Optional item details</b> — a price and currency, and an expiry or "use by" date.</li>
     </ul>
-    <p>If you choose to sign in (see "Signing in" below), we also receive your <b>Google account email, name, and profile photo</b> from Google Sign-In, and the app is assigned a <b>user ID</b> that identifies your account to our scan-credit service. If you unlock something for free, our server keeps your email address with that record (see "Free unlocks" under "Using your own Gemini API key").</p>
+    <p>If you choose to sign in (see "Signing in" below), we also receive your <b>Google account email, name, and profile photo</b> from Google Sign-In, and the app is assigned a <b>user ID</b> that identifies your account to our scan-credit service. If you unlock something for free, our server keeps your email address with that record (see "What our server keeps" under "Using your own Gemini API key").</p>
     <p>We do <b>not</b> collect:</p>
     <ul>
       <li>Your location.</li>
@@ -86,12 +86,13 @@
 
     <h2>Where your data is stored</h2>
     <p>Everything you enter — photos, attached documents, text, prices, dates, item records — is stored <b>locally on your device</b> inside the app's private storage area.</p>
-    <p>There are exactly two ways any of it leaves your device, and you have to turn on each one:</p>
+    <p>There are three ways any of it leaves your device, and you have to turn on each one:</p>
     <ul>
       <li><b>Cloud backup</b> copies your inventory into <b>your own</b> Google Drive, not to us (see "Cloud backup" below).</li>
-      <li><b>Sharing an inventory</b> uploads the areas you choose to our servers, in encrypted form, so the people you invite can see them (see "Sharing an inventory" below).</li>
+      <li><b>Share &amp; Forget</b> puts the areas you share, encrypted, in a folder in the owner's own Google Drive, for the people the owner invites (see "Sharing through your own Google Drive" below).</li>
+      <li><b>Share &amp; Forget Classic</b> uploads the areas you choose to our servers, in encrypted form, so the people you invite can see them (see "Sharing through our servers" below).</li>
     </ul>
-    <p>If you use neither, we hold no copy of your inventory at all.</p>
+    <p>Unless you use Share &amp; Forget Classic, we hold no copy of your inventory at all.</p>
 
     <h2>Optional features that use the network</h2>
     <p>The app works fully offline for manual entry, photos, attachments, browsing, and search-by-name. These features reach out over the network, and only when you use them:</p>
@@ -111,22 +112,28 @@
       <li><b>Using your own Gemini API key</b> — the scan goes straight from your device to Google. Our server is not in the path at all (see "Using your own Gemini API key" below).</li>
     </ul>
     <p><b>Search indexing and Smart Find follow the same routes.</b> Signed out, or on your own API key, the item text or search query goes straight from your device to Google. <b>Signed in, it is routed through our server on its way to Google</b>, together with your user ID — the same server described under "Scan-credit service" below. It forwards the text and does not store it.</p>
-    <p>We never take a document that is already attached to an item and send it to Gemini. One path runs the other way round: when you use the field-read button to pull a price, date, serial or ID number off a file you pick, the first page of that file is sent to Google's Gemini vision model to read that value, and the file is then attached to the item. You start that yourself, the app tells you what it will cost, and it spends a scan credit. Apart from that, an attached document only leaves your device if you turn on &quot;Share all photos and files&quot; for a shared inventory — encrypted, and described in the sharing section below. Google's handling of data sent to the Gemini API is governed by <a href="https://policies.google.com/privacy">Google's privacy policy</a> and the <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms of service</a>.</p>
+    <p>We never take a document that is already attached to an item and send it to Gemini. One path runs the other way round: when you use the field-read button to pull a price, date, serial or ID number off a file you pick, the first page of that file is sent to Google's Gemini vision model to read that value, and the file is then attached to the item. You start that yourself, the app tells you what it will cost, and it spends a scan credit. Apart from that, an attached document only leaves your device if you turn on &quot;Share all photos and files&quot; for a shared inventory — encrypted, and described in the sharing sections below. Google's handling of data sent to the Gemini API is governed by <a href="https://policies.google.com/privacy">Google's privacy policy</a> and the <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms of service</a>.</p>
 
     <h3>Using your own Gemini API key (BYOK — optional)</h3>
     <p>Instead of using the app's scan allowance, you can supply your <b>own</b> Google Gemini API key, from the app's "BYOK — Bring Your Own Key" screen. This is optional and off unless you set it up. When it is on:</p>
     <ul>
       <li><b>The key is stored only on your device</b>, in the operating system's encrypted key store (the Android Keystore). It is <b>never sent to our servers</b>, is <b>not</b> included in your Google Drive backup, is <b>not</b> included in analytics, and is never shared with anyone.</li>
       <li><b>We never receive it.</b> The key is only ever attached to requests the app sends directly to Google at <code>https://generativelanguage.googleapis.com</code>. It appears in no request to any server we operate.</li>
-      <li><b>Your scans skip our server entirely.</b> While your own key is active, the photo and text for a scan travel straight from your device to Google. Our scan-credit server is not in the path, so we do not receive, forward, or see the contents of those scans, and we cannot count them.</li>
+      <li><b>The content of your scans skips our server.</b> While your own key is active, the photo and text for a scan travel straight from your device to Google. Our scan-credit server is not in the path, so we do not receive, forward, or see the contents of those scans. When you're signed in, the app does tell our server how many you ran (see "What our server keeps" below).</li>
       <li><b>Google meters and bills those calls against your own Google account</b>, under Google's Gemini API terms. What Google does with what you send it is covered by <a href="https://policies.google.com/privacy">Google's privacy policy</a>; we are not a party to that exchange.</li>
       <li><b>On a free Gemini key, Google may use what you scan.</b> Under Google's Gemini API terms, what you send on a free key can be used to improve Google's products, and people at Google may review it. Keys on a paid Google plan are treated differently. The <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms</a> have the details.</li>
       <li><b>You can remove the key at any time</b> using "Clear" on that screen, which deletes it from your device. Scans then fall back to the app's own allowance.</li>
     </ul>
-    <p><b>Why the app asks you to sign in for this.</b> Bringing your own key is normally a paid unlock, and the unlock is held against your Google account rather than against a particular handset, so it survives a reinstall or a new phone. Signing in is how the app attaches the unlock to an account. Our server records that this account holds the unlock and when it got it. The request carries no other content and never your key.</p>
-    <p><b>Free unlocks.</b> If you unlock something for free, with a hidden gesture or a code, our server also records your user ID, your account's email address, what was unlocked, and when. Paid unlocks aren't part of this record. We use it to spot abuse, and it's never used for marketing. It's deleted with the rest of your account's data when you ask (see "How to delete your data").</p>
+    <p><b>Why the app asks you to sign in for this.</b> Turning on your own key is free. The unlock belongs to your account rather than to one phone, so it survives a reinstall or a new phone, and signing in is how the app attaches it to an account. The app never sends your key to our server. The free unlock includes a daily number of own-key scans, shown in the app. The one-time "Unlimited own key" purchase removes that limit.</p>
+    <p><b>What our server keeps.</b> Two records:</p>
+    <ul>
+      <li><b>Free unlocks.</b> When you turn on your own key for free, or unlock a feature with a hidden gesture or a code, our server records your user ID, your account's email address, what was unlocked, and when. Paid unlocks aren't part of this record.</li>
+      <li><b>How many own-key scans you run.</b> While you're signed in, the app sends our server the number of scans you ran on your own key and the day they ran. On the free unlock, the app checks with our server before each own-key scan, so the daily limit counts across all your phones. These are numbers and dates only, never the photos, the text, the results, or your key. We keep a running total with the time of the last one, daily counts for the last few days, and weekly totals for 8 weeks.</li>
+    </ul>
+    <p>We use these records to spot abuse and to apply the daily limit. They're never used for marketing. They're deleted with the rest of your account's data when you ask (see "How to delete your data").</p>
 
-    <h3>Sharing an inventory with other people (Share &amp; Forget)</h3>
+    <h3>Sharing through our servers (Share &amp; Forget Classic)</h3>
+    <p>Share &amp; Forget Classic keeps shared inventories on our servers. Share &amp; Forget, which keeps them in the owner's Google Drive instead, is described in the next section.</p>
     <p>Sharing is optional and off until you use it. It requires signing in. When you create a shared inventory, you choose <b>which areas</b> of your inventory it carries, and you invite people with a code or a QR code. Members you invite as viewers can see the shared inventory; members you invite as editors can also change it.</p>
     <p><b>What leaves your device.</b> For the areas you put in the shared inventory, the app uploads to our servers, and makes available to every member of that group:</p>
     <ul>
@@ -154,6 +161,23 @@
     <p><b>Charging.</b> Uploading photos to a shared inventory spends the same credits as Smart Scans. The app tells you the price before an upload runs and never bills you silently.</p>
     <p><b>Leaving, and deletion.</b> If you leave a shared inventory you were invited to, the app asks whether to keep the copy on your device or delete it, and either way your membership and the copy of the snapshot you had uploaded are removed from our server. If you own a shared inventory, you can stop sharing it, which removes it for everyone else. Encrypted photo blobs already uploaded to a group are <b>not</b> automatically erased from our storage — they stay so that a member joining later can still load the pictures. To have a group's stored data deleted outright, email us at the address at the bottom of this policy.</p>
 
+    <h3>Sharing through your own Google Drive (Share &amp; Forget)</h3>
+    <p>Share &amp; Forget is optional and needs sign-in. It keeps a shared inventory in a folder in the <b>owner's own Google Drive</b>, and everyone the owner invites opens that folder with their own Google account, so every member needs an Android phone with the Google Drive app. For this, the app asks Google for access to the files Store &amp; Forget creates or that you pick in it, and nothing else in your Drive. Your inventory never passes through our server.</p>
+    <p><b>What goes into the shared folder.</b> You mark each area Private, View-only or Editable. Private areas never go into it. For the others, the folder gets the area and spot names, item names, descriptions, specifications, tags, notes and expiry dates, and one photo per item. With "Share all photos and files" on, it also gets every other photo on those items and the documents attached to them. Prices, fields you marked private, loan records and search vectors stay out.</p>
+    <p><b>Encryption.</b> Everything in the folder is encrypted on your phone before it's uploaded, the inventory's name included, and the files in it have random names. The key travels inside the invite. So that members can get back in on a new phone, each member's Google Drive keeps a copy of the key in the same private app-data folder your backup uses. That means Google holds both the encrypted folder and a copy of the key, so we don't claim Google can't read it. We never receive the key.</p>
+    <p><b>Inviting someone.</b> You invite a person by the email address of their Google account. The app gives that address to Google Drive, which shares the folder with that account and sends Google's usual sharing email with your invite link in it. The link carries the key. It opens a page on our website, but the key is in the part of a link that browsers never send to a server, and the page doesn't send it anywhere. The address itself stays in your own Google Drive, in that same app-data folder, and on your phones.</p>
+    <p><b>What our server keeps.</b> Our server (a Cloudflare Worker, run by Cloudflare as our service provider) handles membership only. It never holds your items, photos, files or the key. For each shared inventory it keeps:</p>
+    <ul>
+      <li>which accounts are members and what each of them can do,</li>
+      <li>a public key for each member's phone, up to five per member,</li>
+      <li>the inventory's name and each member's display name, both encrypted so we can't read them,</li>
+      <li>a random ID for the shared folder, which is not its Google Drive ID,</li>
+      <li>a one-way hash of each email address you invite.</li>
+    </ul>
+    <p>The hash is how an invite only works for the account it was sent to. When someone joins, our server hashes the email address of their Google sign-in the same way and compares the two, without storing the address. We keep the hash while the invite is open, which is at most seven days, and after the person joins, for as long as they're a member.</p>
+    <p><b>Leaving, removing and stopping.</b> A member who leaves or is removed is taken off our server, hash included, and a removed member stops syncing at once. When the owner stops sharing, every member is removed, open invites are cancelled, and the shared folder goes to the owner's Google Drive trash, where Google keeps it for 30 days unless the owner empties the trash sooner. Anything members already downloaded stays on their phones, and Google Drive can keep earlier versions of a changed file for up to 30 days. After you stop sharing, our server keeps a record with only you in it: your user ID, the encrypted name and your phones' public keys. To have it erased, email us at the address at the bottom of this policy.</p>
+    <p>Store &amp; Forget's use and transfer to any other app of information received from Google APIs will adhere to the Google API Services User Data Policy, including the Limited Use requirements.</p>
+
     <h3>Signing in (Google Sign-In / Firebase Authentication)</h3>
     <p>Signing in is optional. You need an account to buy scan credits, to earn extra scans by watching a rewarded ad, to back up your inventory to your Google Drive, or to share an inventory. When you sign in, Google Sign-In provides the app with your Google account's <b>email, name, and profile photo</b>, and Firebase Authentication issues a <b>user ID</b> that identifies your account to our scan-credit service. We do not receive your Google password. You can use the entire core app without ever signing in.</p>
 
@@ -174,12 +198,12 @@
     <p>Store &amp; Forget shows ads after a number of free scans, unless you hold purchased scan credits. Ads are served by <b>Google AdMob</b>, which may collect and use a <b>device advertising ID</b> and related device/ad information to serve and measure ads. This data is processed by Google as an advertising partner. You can reset or limit your advertising ID in your device's Google settings. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a> and Google's privacy policy.</p>
 
     <h3>Scan-credit service (our server)</h3>
-    <p>To meter free and paid scans, the app talks to a small server we operate (a Cloudflare Worker). It receives your Firebase <b>user ID</b> to track how many scans your account has left, and the rewarded-ad reward callback that grants you credits. On paid/credit-backed scans it also receives the <b>photo and text</b> for that scan — including the single photo of a price tag or expiry date when you use quick snap — and immediately forwards it to Google's Gemini API to produce the result. It does <b>not</b> store your photos or item text. We keep a per-account scan/credit balance, not your inventory. The same server keeps the free-unlock records described under "Using your own Gemini API key".</p>
+    <p>To meter free and paid scans, the app talks to a small server we operate (a Cloudflare Worker). It receives your Firebase <b>user ID</b> to track how many scans your account has left, and the rewarded-ad reward callback that grants you credits. On paid/credit-backed scans it also receives the <b>photo and text</b> for that scan — including the single photo of a price tag or expiry date when you use quick snap — and immediately forwards it to Google's Gemini API to produce the result. It does <b>not</b> store your photos or item text. We keep a per-account scan/credit balance, not your inventory. The same server keeps the free-unlock records and own-key scan counts described under "Using your own Gemini API key".</p>
     <p>When you are signed in, search indexing and Smart Find go through this server too. It receives the item text you saved, or the words you typed into the search box, passes them to Google's embedding model, and hands back the search vector. It does <b>not</b> store them. Alongside that it keeps anonymous <b>counts</b> of how many of these operations your account has performed (plain numbers, grouped as search / save / re-index), which is what lets us keep the shared free AI tier healthy and detect abuse. Those counts carry no item text, photos, or locations. Signed out, or on your own API key, none of this reaches us — the indexing call goes straight to Google.</p>
-    <p>The same server handles shared inventories, as described under "Sharing an inventory" above — that is the one case where it stores content, and it stores it encrypted.</p>
+    <p>The same server handles Share &amp; Forget Classic, as described under "Sharing through our servers" above. That is the one case where it stores content, and it stores it encrypted. For Share &amp; Forget it stores no content, only the membership records described under "Sharing through your own Google Drive".</p>
 
     <h3>Buying scan credits or an unlock (Google Play Billing)</h3>
-    <p>If you buy a scan-credit pack or a one-time unlock, such as Remove ads or Fire &amp; Forget, the purchase is handled by <b>Google Play Billing</b>. Google processes the payment. <b>RevenueCat</b>, which manages purchases for us as our service provider, receives your user ID from the app and the purchase details from Google Play. We receive a purchase confirmation so we can add the credits to your balance or turn the unlock on for your account, and we keep which unlocks your account holds and when it got them. We do <b>not</b> receive your card number or other payment details.</p>
+    <p>If you buy a scan-credit pack or a one-time unlock, such as Remove ads or Unlimited own key, the purchase is handled by <b>Google Play Billing</b>. Google processes the payment. <b>RevenueCat</b>, which manages purchases for us as our service provider, receives your user ID from the app and the purchase details from Google Play. We receive a purchase confirmation so we can add the credits to your balance or turn the unlock on for your account, and we keep which unlocks your account holds and when it got them. We do <b>not</b> receive your card number or other payment details.</p>
 
     <h2>How the app updates itself</h2>
     <p>Store &amp; Forget updates over two channels, and neither one asks you to install anything from outside Google Play:</p>
@@ -208,8 +232,9 @@
       <li><b>Erase everything in the app at once</b> — open <b>Advanced Settings → Erase all data</b>. This wipes the local database (all areas, spots, items) and removes every photo and attached document from the app's private storage.</li>
       <li><b>Delete the app entirely</b> — uninstall Store &amp; Forget from your device. Android will remove the app's private storage, including the SQLite database, all photo files, and all attached documents.</li>
       <li><b>Delete your cloud backup</b> — remove the app's data folder from your own Google Drive account.</li>
-      <li><b>Leave or stop a shared inventory</b> — from the sharing screen. This removes your membership and your uploaded snapshot from our server; see "Sharing an inventory" above for what remains and how to have it erased.</li>
-      <li><b>Delete what our server holds for your account</b> (your scan-credit balance, unlock records, and any shared-inventory data): email us at the address below.</li>
+      <li><b>Leave or stop a Share &amp; Forget Classic inventory</b> — from the sharing screen. This removes your membership and your uploaded snapshot from our server; see "Sharing through our servers" above for what remains and how to have it erased.</li>
+      <li><b>Leave or stop a Share &amp; Forget inventory</b> — from the sharing screen. Leaving takes you off our server. Stopping also moves the shared folder to your Google Drive trash; empty the trash to erase it before Google's 30 days are up. See "Sharing through your own Google Drive" above for what remains.</li>
+      <li><b>Delete what our server holds for your account</b> (your scan-credit balance, unlock records, own-key scan counts, and any shared-inventory data): email us at the address below.</li>
     </ul>
 
     <h2>Children</h2>
