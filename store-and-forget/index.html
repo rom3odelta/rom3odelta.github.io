@@ -57,7 +57,7 @@
   <main>
     <h1>Privacy Policy — Store &amp; Forget</h1>
     <div class="meta">
-      <div><b>Effective date:</b> 2026-10-11</div>
+      <div><b>Effective date:</b> 2026-10-12</div>
       <div><b>App:</b> Store &amp; Forget (Android)</div>
       <div><b>Operator:</b> Hyper Koala Studio</div>
       <div><b>Contact:</b> <a href="mailto:privacy@hyperkoalastudio.com">privacy@hyperkoalastudio.com</a></div>
@@ -80,7 +80,7 @@
       <li>Your location.</li>
       <li>Your contacts, calendar, SMS, call logs, or any other personal data on your device.</li>
       <li>Audio recordings (the camera permission does not record audio in this app).</li>
-      <li>Crash reports of our own.</li>
+      <li>Crash reports of our own. The one exception is a diagnostics report you choose to send (see "Diagnostics you send us").</li>
       <li>Usage analytics <b>unless you are signed in and turn them on</b> (see "Usage analytics" below). They are off by default and off entirely while you are signed out.</li>
     </ul>
 
@@ -203,6 +203,9 @@
     <p>To meter free and paid scans, the app talks to a small server we operate (a Cloudflare Worker). It receives your Firebase <b>user ID</b> to track how many scans your account has left, and the rewarded-ad reward callback that grants you credits. On paid/credit-backed scans it also receives the <b>photo and text</b> for that scan — including the single photo of a price tag or expiry date when you use quick snap — and immediately forwards it to Google's Gemini API to produce the result. It does <b>not</b> store your photos or item text. We keep a per-account scan/credit balance, not your inventory. The same server keeps the free-unlock records and own-key scan counts described under "Using your own Gemini API key".</p>
     <p>When you are signed in, search indexing and Smart Find go through this server too. It receives the item text you saved, or the words you typed into the search box, passes them to Google's embedding model, and hands back the search vector. It does <b>not</b> store them. Alongside that it keeps anonymous <b>counts</b> of how many of these operations your account has performed (plain numbers, grouped as search / save / re-index), which is what lets us keep the shared free AI tier healthy and detect abuse. Those counts carry no item text, photos, or locations. Signed out, or on your own API key, none of this reaches us — the indexing call goes straight to Google.</p>
     <p>The same server handles Share &amp; Forget Classic, as described under "Sharing through our servers" above. That is the one case where it stores content, and it stores it encrypted. For Share &amp; Forget it stores no content, only the membership records described under "Sharing through your own Google Drive".</p>
+
+    <h3>Diagnostics you send us (optional)</h3>
+    <p>If something goes wrong, you can tap Send diagnostics in your profile. The app first shows you the whole report, and nothing is sent until you tap Send. The report holds the app and phone versions, recent error codes, and counts such as how many items and photos you have. It never includes item names, photos, notes, places or your location. If you&#39;re signed in, it also carries your user ID so we can match it to your support email. We keep each report for 30 days, then it&#39;s deleted automatically.</p>
 
     <h3>Buying scan credits or an unlock (Google Play Billing)</h3>
     <p>If you buy a scan-credit pack or a one-time unlock, such as Remove ads or No cap BYOK, the purchase is handled by <b>Google Play Billing</b>. Google processes the payment. <b>RevenueCat</b>, which manages purchases for us as our service provider, receives your user ID from the app and the purchase details from Google Play. We receive a purchase confirmation so we can add the credits to your balance or turn the unlock on for your account, and we keep which unlocks your account holds and when it got them. We do <b>not</b> receive your card number or other payment details.</p>
