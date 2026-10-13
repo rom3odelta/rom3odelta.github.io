@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — Store &amp; Forget</title>
-  <meta name="description" content="Privacy policy for Store & Forget, an Android home inventory app by Hyper Koala Studio.">
+  <meta name="description" content="Privacy policy for Store & Forget, an inventory app for Android, iPhone and iPad by Hyper Koala Studio.">
   <style>
     :root {
       --fg: #1c1d22;
@@ -57,14 +57,14 @@
   <main>
     <h1>Privacy Policy — Store &amp; Forget</h1>
     <div class="meta">
-      <div><b>Effective date:</b> 2026-10-12</div>
-      <div><b>App:</b> Store &amp; Forget (Android)</div>
+      <div><b>Effective date:</b> 2026-10-13</div>
+      <div><b>App:</b> Store &amp; Forget (Android, iPhone and iPad)</div>
       <div><b>Operator:</b> Hyper Koala Studio</div>
       <div><b>Contact:</b> <a href="mailto:privacy@hyperkoalastudio.com">privacy@hyperkoalastudio.com</a></div>
     </div>
 
     <h2>What this app is</h2>
-    <p>Store &amp; Forget is an Android inventory tracker that helps you remember where you put physical items in your home. You take a photo of something, optionally tag and describe it, and the app records which area and spot it went into. Your inventory lives on your device by default. Everything that sends data anywhere — AI features, sign-in, ads, cloud backup, buying scan credits, and sharing an inventory with other people — is optional, and each one is described below.</p>
+    <p>Store &amp; Forget is an inventory tracker for Android, iPhone and iPad that helps you remember where you put physical items in your home. You take a photo of something, optionally tag and describe it, and the app records which area and spot it went into. Your inventory lives on your device by default. Everything that sends data anywhere — AI features, sign-in, ads, cloud backup, buying scan credits, and sharing an inventory with other people — is optional, and each one is described below.</p>
 
     <h2>Data we collect</h2>
     <p>The app collects only what you actively put into it:</p>
@@ -74,7 +74,7 @@
       <li><b>Documents you attach to an item</b> — receipts, warranty cards, manuals, and other files (JPEG, PNG, WebP, HEIC, or PDF), together with the label you choose for each one.</li>
       <li><b>Optional item details</b> — a price and currency, and an expiry or "use by" date.</li>
     </ul>
-    <p>If you choose to sign in (see "Signing in" below), we also receive your <b>Google account email, name, and profile photo</b> from Google Sign-In, and the app is assigned a <b>user ID</b> that identifies your account to our scan-credit service. If you unlock something for free, our server keeps your email address with that record (see "What our server keeps" under "Using your own Gemini API key").</p>
+    <p>If you choose to sign in (see "Signing in" below), we also receive your <b>Google account email, name, and profile photo</b> from Google Sign-In (or, with Sign in with Apple, your name if you share it and your email or a Hide My Email relay address), and the app is assigned a <b>user ID</b> that identifies your account to our scan-credit service. If you unlock something for free, our server keeps your email address with that record (see "What our server keeps" under "Using your own Gemini API key").</p>
     <p>We do <b>not</b> collect:</p>
     <ul>
       <li>Your location.</li>
@@ -88,7 +88,7 @@
     <p>Everything you enter — photos, attached documents, text, prices, dates, item records — is stored <b>locally on your device</b> inside the app's private storage area.</p>
     <p>There are three ways any of it leaves your device, and you have to turn on each one:</p>
     <ul>
-      <li><b>Cloud backup</b> copies your inventory into <b>your own</b> Google Drive, not to us (see "Cloud backup" below).</li>
+      <li><b>Cloud backup</b> copies your inventory into <b>your own</b> Google Drive or iCloud, not to us (see "Cloud backup" below).</li>
       <li><b>Share &amp; Forget</b> puts the areas you share, encrypted, in a folder in the owner's own Google Drive (and an editor's changes, for a while, in a folder in theirs), for the people the owner invites (see "Sharing through your own Google Drive" below).</li>
       <li><b>Share &amp; Forget Classic</b> uploads the areas you choose to our servers, in encrypted form, so the people you invite can see them (see "Sharing through our servers" below).</li>
     </ul>
@@ -98,6 +98,7 @@
     <p>The app works fully offline for manual entry, photos, attachments, browsing, and search-by-name. These features reach out over the network, and only when you use them:</p>
 
     <h3>Smart Scan, quick snap, and search indexing (Google Gemini)</h3>
+    <p>The app asks before the first time it sends anything to Google's Gemini, and you can say no. The "Use Gemini AI" switch in the Smart Scan settings turns it off or back on later. With it off, nothing goes to Gemini, and you can still add items by hand and search by keyword.</p>
     <p>When the app's Smart features are active, the app sends data to Google's Gemini API:</p>
     <ul>
       <li><b>Auto-describe a scanned item (on tap):</b> when you tap "Smart Scan," the photo of the item plus any text you've already entered for that item is sent to Google's Gemini vision model so it can suggest a name, description, and tags. This happens only when you tap the scan button.</li>
@@ -118,7 +119,7 @@
     <h3>Using your own Gemini API key (BYOK — optional)</h3>
     <p>Instead of using the app's scan allowance, you can supply your <b>own</b> Google Gemini API key, from the app's "BYOK — Bring Your Own Key" screen. This is optional and off unless you set it up. When it is on:</p>
     <ul>
-      <li><b>The key is stored only on your device</b>, in the operating system's encrypted key store (the Android Keystore). It is <b>never sent to our servers</b>, is <b>not</b> included in your Google Drive backup, is <b>not</b> included in analytics, and is never shared with anyone.</li>
+      <li><b>The key is stored only on your device</b>, in the operating system's encrypted key store (the Android Keystore, or the Keychain on iPhone and iPad). It is <b>never sent to our servers</b>, is <b>not</b> included in your Google Drive or iCloud backup, is <b>not</b> included in analytics, and is never shared with anyone.</li>
       <li><b>We never receive it.</b> The key is only ever attached to requests the app sends directly to Google at <code>https://generativelanguage.googleapis.com</code>. It appears in no request to any server we operate.</li>
       <li><b>The content of your scans skips our server.</b> While your own key is active, the photo and text for a scan travel straight from your device to Google. Our scan-credit server is not in the path, so we do not receive, forward, or see the contents of those scans. When you're signed in, the app does tell our server how many you ran (see "What our server keeps" below).</li>
       <li><b>Google meters and bills those calls against your own Google account</b>, under Google's Gemini API terms. What Google does with what you send it is covered by <a href="https://policies.google.com/privacy">Google's privacy policy</a>; we are not a party to that exchange.</li>
@@ -134,7 +135,7 @@
     <p>We use these records to spot abuse and to apply the daily limit. They're never used for marketing. They're deleted with the rest of your account's data when you ask (see "How to delete your data").</p>
 
     <h3>Sharing through our servers (Share &amp; Forget Classic)</h3>
-    <p>Share &amp; Forget Classic keeps shared inventories on our servers. Share &amp; Forget, which keeps them in the owner's Google Drive instead, is described in the next section.</p>
+    <p>Share &amp; Forget Classic keeps shared inventories on our servers. Share &amp; Forget, which keeps them in the owner's Google Drive instead, is described in the next section. The app doesn't offer Classic for new shares on iPhone and iPad.</p>
     <p>Sharing is optional and off until you use it. It requires signing in. When you create a shared inventory, you choose <b>which areas</b> of your inventory it carries, and you invite people with a code or a QR code. Members you invite as viewers can see the shared inventory; members you invite as editors can also change it.</p>
     <p><b>What leaves your device.</b> For the areas you put in the shared inventory, the app uploads to our servers, and makes available to every member of that group:</p>
     <ul>
@@ -163,7 +164,7 @@
     <p><b>Leaving, and deletion.</b> If you leave a shared inventory you were invited to, the app asks whether to keep the copy on your device or delete it, and either way your membership and the copy of the snapshot you had uploaded are removed from our server. If you own a shared inventory, you can stop sharing it, which removes it for everyone else. Encrypted photo blobs already uploaded to a group are <b>not</b> automatically erased from our storage — they stay so that a member joining later can still load the pictures. To have a group's stored data deleted outright, email us at the address at the bottom of this policy.</p>
 
     <h3>Sharing through your own Google Drive (Share &amp; Forget)</h3>
-    <p>Share &amp; Forget is optional and needs sign-in with a Google account. It keeps a shared inventory in a folder in the <b>owner's own Google Drive</b>. For this, the app asks Google for access to the files Store &amp; Forget creates, and nothing else in your Drive. Your inventory never passes through our server.</p>
+    <p>Share &amp; Forget is optional and needs sign-in with a Google account. It works on Android, iPhone and iPad. If you signed in with Apple on an iPhone or iPad, you connect a Google account in the app first. It keeps a shared inventory in a folder in the <b>owner's own Google Drive</b>. For this, the app asks Google for access to the files Store &amp; Forget creates, and nothing else in your Drive. Your inventory never passes through our server.</p>
     <p><b>What goes into the shared folder.</b> You mark each area Private, View-only or Editable. Private areas never go into it. For the others, the folder gets the area and spot names, item names, descriptions, specifications, tags, notes and expiry dates, and one photo per item. With "Share all photos and files" on, it also gets every other photo on those items and the documents attached to them. Prices, fields you marked private, loan records and search vectors stay out.</p>
     <p><b>Encryption.</b> Everything in the folder is encrypted on your phone before it's uploaded, the inventory's name included, and the files in it have random names. The key travels inside the invite. So that members can get back in on a new phone, each member's Google Drive keeps a copy of the key in the same private app-data folder your backup uses. That means Google holds both the encrypted folder and a copy of the key, so we don't claim Google can't read it. We never receive the key.</p>
     <p><b>How members reach the folder, and what they can see.</b> The shared folder is set so that anyone who has its link can read it, and it can't be found by searching Drive. That lets members' phones read it directly from Google Drive with an access key that belongs to our app, without the Google Drive app and without the folder being shared with their account. We never give out the link: its location is stored encrypted on our server, and only members get it. Everything in it stays encrypted, so the link alone shows nothing of your inventory. Google Drive does show who made each file and when it changed. So members can see the <b>Google name, email address and profile photo of the owner and of every editor</b>, and when they last changed something. Viewers' details don't appear. When an editor changes something, their phone puts it in a folder in <b>the editor's own Google Drive</b>, shared the same way, and the owner's app later copies it into the owner's folder.</p>
@@ -180,8 +181,8 @@
     <p><b>Leaving, removing and stopping.</b> A member who leaves or is removed is taken off our server, hash included, and a removed member stops syncing at once. When someone is removed, the owner's app also copies the shared folder to a new place in the owner's Drive, the removed person isn't told where, and the old folder goes to the owner's trash. An editor who leaves has their own folder moved to their Drive trash. When the owner stops sharing, every member is removed, open invites are cancelled, and the shared folder goes to the owner's Google Drive trash, where Google keeps it for 30 days unless the owner empties the trash sooner. Anything members already downloaded stays on their phones, and Google Drive can keep earlier versions of a changed file for up to 30 days. After you stop sharing, our server keeps a record with only you in it: your user ID, the encrypted name and your phones' public keys. To have it erased, email us at the address at the bottom of this policy.</p>
     <p>Store &amp; Forget's use and transfer to any other app of information received from Google APIs will adhere to the Google API Services User Data Policy, including the Limited Use requirements.</p>
 
-    <h3>Signing in (Google Sign-In / Firebase Authentication)</h3>
-    <p>Signing in is optional. You need an account to buy scan credits, to earn extra scans by watching a rewarded ad, to back up your inventory to your Google Drive, or to share an inventory. When you sign in, Google Sign-In provides the app with your Google account's <b>email, name, and profile photo</b>, and Firebase Authentication issues a <b>user ID</b> that identifies your account to our scan-credit service. We do not receive your Google password. You can use the entire core app without ever signing in. You can delete your account at any time; see <a href="#delete-account">Delete your account</a> below.</p>
+    <h3>Signing in (Google, Apple, Firebase Authentication)</h3>
+    <p>Signing in is optional. You need an account to buy scan credits, to earn extra scans by watching a rewarded ad, to back up your inventory to your Google Drive or iCloud, or to share an inventory. On Android you sign in with Google. On iPhone and iPad you can sign in with Google or with Apple. Google Sign-In provides the app with your Google account's <b>email, name, and profile photo</b>. Sign in with Apple provides your <b>name</b>, if you choose to share it, and your <b>email address</b> or a private relay address from Apple's Hide My Email. Either way, Firebase Authentication issues a <b>user ID</b> that identifies your account to our scan-credit service. We never receive your Google or Apple password. You can use the entire core app without ever signing in. You can delete your account at any time; see <a href="#delete-account">Delete your account</a> below.</p>
 
     <h3>Usage analytics (optional — off unless you opt in)</h3>
     <p>To understand which features people use and where the app is rough, you can optionally share anonymous product analytics. This is <b>off by default</b>. It is available only when you are <b>signed in</b>, and only after you turn on <b>Advanced Settings → "Share usage analytics."</b> While you are signed out, no analytics are collected at all.</p>
@@ -193,30 +194,33 @@
     <p>Each event is tied only to a <b>random, app-generated analytics instance ID</b>. We do <b>not</b> send your name, email, or account ID to analytics, and we never link these events to your identity.</p>
     <p>We do <b>not</b> send your inventory to analytics. Item names, photos, attached documents, descriptions, specs, tags, notes, prices, dates, and the names of your areas and spots are <b>never</b> included in any analytics event — analytics see <i>that</i> you saved an item, never <i>what</i> the item is. You can turn analytics back off at any time from <b>Advanced Settings → "Share usage analytics,"</b> which stops further collection. Analytics data is processed by Google under Google's privacy policy.</p>
 
-    <h3>Cloud backup to your own Google Drive (optional)</h3>
+    <h3>Cloud backup to your own Google Drive or iCloud (optional)</h3>
     <p>If you turn on cloud backup, the app copies your inventory (item text and photos, and your attached documents if you leave that option on) into a <b>private, app-specific folder in your own Google Drive</b> (the Drive "app data" area). This data lives in <b>your</b> Google account, under your control — we cannot see or access it, and it is not visible in your normal Drive file list. You can disconnect backup or delete the backup folder at any time from your Google account. This uses Google Drive, governed by Google's privacy policy.</p>
+    <p>On iPhone and iPad, the backup goes to a private folder for the app in your own iCloud Drive if you signed in with Apple only, or if you choose iCloud in the backup settings. It isn't shown in the Files app, and we can't see or access it. To delete it, open Settings on your iPhone, tap your name, then iCloud, and find Store &amp; Forget in the storage list. This uses iCloud, governed by Apple's privacy policy.</p>
 
     <h3>Ads (Google AdMob)</h3>
-    <p>Store &amp; Forget shows ads after a number of free scans, unless you hold purchased scan credits. Ads are served by <b>Google AdMob</b>, which may collect and use a <b>device advertising ID</b> and related device/ad information to serve and measure ads. This data is processed by Google as an advertising partner. You can reset or limit your advertising ID in your device's Google settings. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a> and Google's privacy policy.</p>
+    <p>Store &amp; Forget shows ads. When you're signed in, they start after a number of free scans; if you use your own Gemini key, they start right away; while you're signed out on the free trial, there are none. You can also choose to watch a rewarded video to earn extra scans. Buying Remove ads turns the other ads off. Ads are served by <b>Google AdMob</b>, which may collect and use a <b>device advertising ID</b> and related device/ad information to serve and measure ads. This data is processed by Google as an advertising partner. On Android you can reset or delete your advertising ID in your device's Google settings. On iPhone and iPad, AdMob uses your device's advertising identifier (IDFA) only if you tap Allow when Apple's tracking prompt appears before the first ad. You can change that at any time in Settings &gt; Privacy &amp; Security &gt; Tracking. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a> and Google's privacy policy.</p>
 
     <h3>Scan-credit service (our server)</h3>
     <p>To meter free and paid scans, the app talks to a small server we operate (a Cloudflare Worker). It receives your Firebase <b>user ID</b> to track how many scans your account has left, and the rewarded-ad reward callback that grants you credits. On paid/credit-backed scans it also receives the <b>photo and text</b> for that scan — including the single photo of a price tag or expiry date when you use quick snap — and immediately forwards it to Google's Gemini API to produce the result. It does <b>not</b> store your photos or item text. We keep a per-account scan/credit balance, not your inventory. The same server keeps the free-unlock records and own-key scan counts described under "Using your own Gemini API key".</p>
+    <p>To keep the free scans from being abused, the app proves to our server that it's the genuine app, using Firebase App Check. On Android that relies on Google Play Integrity. On iPhone and iPad it relies on Apple's App Attest, or DeviceCheck on older devices. These checks carry no name, email or inventory.</p>
     <p>When you are signed in, search indexing and Smart Find go through this server too. It receives the item text you saved, or the words you typed into the search box, passes them to Google's embedding model, and hands back the search vector. It does <b>not</b> store them. Alongside that it keeps anonymous <b>counts</b> of how many of these operations your account has performed (plain numbers, grouped as search / save / re-index), which is what lets us keep the shared free AI tier healthy and detect abuse. Those counts carry no item text, photos, or locations. Signed out, or on your own API key, none of this reaches us — the indexing call goes straight to Google.</p>
     <p>The same server handles Share &amp; Forget Classic, as described under "Sharing through our servers" above. That is the one case where it stores content, and it stores it encrypted. For Share &amp; Forget it stores no content, only the membership records described under "Sharing through your own Google Drive".</p>
 
     <h3>Diagnostics you send us (optional)</h3>
     <p>If something goes wrong, you can tap Send diagnostics in your profile. The app first shows you the whole report, and nothing is sent until you tap Send. The report holds the app and phone versions, recent error codes, and counts such as how many items and photos you have. It never includes item names, photos, notes, places or your location. If you&#39;re signed in, it also carries your user ID so we can match it to your support email. We keep each report for 30 days, then it&#39;s deleted automatically.</p>
 
-    <h3>Buying scan credits or an unlock (Google Play Billing)</h3>
-    <p>If you buy a scan-credit pack or a one-time unlock, such as Remove ads or No cap BYOK, the purchase is handled by <b>Google Play Billing</b>. Google processes the payment. <b>RevenueCat</b>, which manages purchases for us as our service provider, receives your user ID from the app and the purchase details from Google Play. We receive a purchase confirmation so we can add the credits to your balance or turn the unlock on for your account, and we keep which unlocks your account holds and when it got them. We do <b>not</b> receive your card number or other payment details.</p>
+    <h3>Buying scan credits or an unlock (Google Play or the App Store)</h3>
+    <p>If you buy a scan-credit pack or a one-time unlock, such as Remove ads or No cap BYOK, the purchase is handled by Google Play Billing on Android, or by Apple through the App Store on iPhone and iPad. Google or Apple processes the payment. <b>RevenueCat</b>, which manages purchases for us as our service provider, receives your user ID from the app and the purchase details from the store. We receive a purchase confirmation so we can add the credits to your balance or turn the unlock on for your account, and we keep which unlocks your account holds and when it got them. We do <b>not</b> receive your card number or other payment details.</p>
 
     <h2>How the app updates itself</h2>
-    <p>Store &amp; Forget updates over two channels, and neither one asks you to install anything from outside Google Play:</p>
+    <p>Store &amp; Forget updates over two channels, and neither one asks you to install anything from outside Google Play or the App Store:</p>
     <ul>
       <li><b>Google Play in-app updates.</b> When a newer version is on the Play Store, the app can show Google's own update panel. The update is downloaded and installed <b>by Google Play</b>, through Google's official update mechanism. We never download or install an app package ourselves, and the app never asks you to sideload one.</li>
-      <li><b>Over-the-air JavaScript updates (Expo / EAS Update).</b> Smaller fixes ship as a JavaScript bundle downloaded from Expo's update service, which is the standard update mechanism for React Native apps. This can change the app's JavaScript only — it cannot add native code, cannot add or change an Android permission, and cannot change what the app is allowed to do on your device. When one has downloaded, the app tells you, and it applies the next time you restart the app.</li>
+      <li><b>App Store updates (iPhone and iPad).</b> New versions come from the App Store. The app never downloads or installs a new version itself. It only opens its App Store page when you ask it to.</li>
+      <li><b>Over-the-air JavaScript updates (Expo / EAS Update).</b> Smaller fixes ship as a JavaScript bundle downloaded from Expo's update service, which is the standard update mechanism for React Native apps. This can change the app's JavaScript only — it cannot add native code, cannot add or change a permission, and cannot change what the app is allowed to do on your device. When one has downloaded, the app tells you, and it applies the next time you restart the app.</li>
     </ul>
-    <p><b>What an update check sends.</b> On launch, the app asks Expo's update service whether a newer bundle exists. That request carries the platform ("android"), the app's runtime version and release channel, the ID of the bundle it is currently running, and an <b>EAS client ID</b> — a random identifier generated the first time the app runs and kept in the app's own private storage. It is not your device's advertising ID, not a hardware identifier, and is not linked to your Google account, your name, or your inventory; clearing the app's data or uninstalling the app discards it. <b>No inventory data of any kind is sent in an update check.</b> Expo processes this as our service provider, under <a href="https://expo.dev/privacy">Expo's privacy policy</a>.</p>
+    <p><b>What an update check sends.</b> On launch, the app asks Expo's update service whether a newer bundle exists. That request carries the platform ("android" or "ios"), the app's runtime version and release channel, the ID of the bundle it is currently running, and an <b>EAS client ID</b> — a random identifier generated the first time the app runs and kept in the app's own private storage. It is not your device's advertising ID, not a hardware identifier, and is not linked to your Google account, your name, or your inventory; clearing the app's data or uninstalling the app discards it. <b>No inventory data of any kind is sent in an update check.</b> Expo processes this as our service provider, under <a href="https://expo.dev/privacy">Expo's privacy policy</a>.</p>
 
     <h2>Notifications</h2>
     <p>If you turn on reminders (for items you have lent out, or for items about to expire), the app schedules those notifications <b>on your device</b>. Nothing about them is sent to us or to anyone else, and no reminder is delivered through a server.</p>
@@ -227,16 +231,18 @@
       <li><b>Photos / Media library</b> — to let you attach existing photos from your library to an item.</li>
       <li><b>Files / documents</b> — to let you pick a receipt, warranty card, or manual from your device and attach it to an item. The app only reads the file you choose, and copies it into its own private storage; it does not browse or scan your files.</li>
       <li><b>Notifications</b> — to deliver the optional lend and expiry reminders described above.</li>
+      <li><b>Tracking</b> (iPhone and iPad only) — Apple's App Tracking Transparency prompt, shown before the first ad. See "Ads" above.</li>
       <li><b>Internet / network</b> — for the optional features above (AI, sign-in, ads, cloud backup, sharing, buying credits).</li>
     </ul>
 
     <h2 id="delete-data">How to delete your data</h2>
     <h3 id="delete-account">Delete your account</h3>
-    <p>Signing in creates a Store &amp; Forget account. To delete it, open the app, go to <b>Profile</b> and tap <b>Delete account</b>. You'll sign in with Google once more to confirm, and the deletion starts right away.</p>
+    <p>Signing in creates a Store &amp; Forget account. To delete it, open the app, go to <b>Profile</b> and tap <b>Delete account</b>. You'll sign in once more, with Google or Apple, to confirm, and the deletion starts right away.</p>
     <p>It deletes:</p>
     <ul>
       <li>your account and sign-in</li>
-      <li>your backup in your Google Drive</li>
+      <li>your backup in your Google Drive or iCloud</li>
+      <li>if you signed in with Apple, the app's Sign in with Apple access, which we revoke with Apple</li>
       <li>your Koala Credits, including unused ones</li>
       <li>the features you unlocked, free or paid, such as Remove ads. Deleting your account doesn't refund a purchase.</li>
       <li>everything else our server holds for your account, such as unlock records and scan counts</li>
@@ -245,18 +251,18 @@
     <p>What stays:</p>
     <ul>
       <li>the items on your phone, unless you tick <b>Also erase everything on this phone</b></li>
-      <li>your purchase records, which belong to your Google Play account. Google Play keeps them, and RevenueCat, which manages purchases for us, keeps your purchase history under your old user ID.</li>
-      <li>a record of how many free scans your Google account has used and whether own-key scans were switched off for it. It's stored under a one-way code made from your Google account's ID and holds no email, name or inventory. We keep it for as long as we offer free scans, so deleting an account and signing in again doesn't start a new set of free scans.</li>
+      <li>your purchase records, which belong to your Google Play account or Apple Account. Google or Apple keeps them, and RevenueCat, which manages purchases for us, keeps your purchase history under your old user ID.</li>
+      <li>a record of how many free scans your Google or Apple account has used and whether own-key scans were switched off for it. It's stored under a one-way code made from that account's ID and holds no email, name or inventory. We keep it for as long as we offer free scans, so deleting an account and signing in again doesn't start a new set of free scans.</li>
     </ul>
-    <p>Don't have the app anymore? Email <a href="mailto:privacy@hyperkoalastudio.com">privacy@hyperkoalastudio.com</a> from the Google account you signed in with and ask us to delete your account. We'll delete the same data within 30 days and reply when it's done. Your backup is in your own Google Drive, so delete that part yourself: in Google Drive on the web, open <b>Settings</b>, then <b>Manage apps</b>, find Store &amp; Forget and choose <b>Delete hidden app data</b>.</p>
+    <p>Don't have the app anymore? Email <a href="mailto:privacy@hyperkoalastudio.com">privacy@hyperkoalastudio.com</a> from the email address on your account and ask us to delete it. If you signed in with Apple and hid your email, include the relay address, which your iPhone lists under Settings &gt; your name &gt; Sign in with Apple. We'll delete the same data within 30 days and reply when it's done. Your backup is in your own Google Drive, so delete that part yourself: in Google Drive on the web, open <b>Settings</b>, then <b>Manage apps</b>, find Store &amp; Forget and choose <b>Delete hidden app data</b>. An iCloud backup is deleted from your iPhone's Settings. See "Cloud backup" above.</p>
 
     <h3>Delete your inventory and other data</h3>
     <p>Your inventory lives on your device for as long as you keep it there. You can delete it at any time:</p>
     <ul>
       <li><b>Delete individual items, areas, spots, or attachments</b>: use the delete actions inside the app on each detail screen. Deleting an attachment removes the file from your device, not just the entry.</li>
       <li><b>Erase everything in the app at once</b>: open <b>Advanced Settings</b>, tap <b>Erase data</b> and choose <b>This device only</b>. This wipes the local database (all areas, spots, items) and removes every photo and attached document from the app's private storage.</li>
-      <li><b>Delete the app entirely</b>: uninstall Store &amp; Forget from your device. Android will remove the app's private storage, including the SQLite database, all photo files, and all attached documents.</li>
-      <li><b>Delete your cloud backup</b>: open <b>Advanced Settings</b>, tap <b>Erase data</b> and choose <b>Cloud backup only</b>, or delete the app's hidden data in Google Drive (see "Delete your account" above).</li>
+      <li><b>Delete the app entirely</b>: uninstall Store &amp; Forget from your device. Your phone or tablet removes the app's private storage, including the SQLite database, all photo files, and all attached documents. An iCloud backup stays in your iCloud until you delete it.</li>
+      <li><b>Delete your cloud backup</b>: open <b>Advanced Settings</b>, tap <b>Erase data</b> and choose <b>Cloud backup only</b>, or delete the app's hidden data in Google Drive or iCloud (see "Delete your account" above).</li>
       <li><b>Leave or stop a Share &amp; Forget Classic inventory</b>: from the sharing screen. This removes your membership and your uploaded snapshot from our server; see "Sharing through our servers" above for what remains and how to have it erased.</li>
       <li><b>Leave or stop a Share &amp; Forget inventory</b>: from the sharing screen. Leaving takes you off our server. Stopping also moves the shared folder to your Google Drive trash; empty the trash to erase it before Google's 30 days are up. See "Sharing through your own Google Drive" above for what remains.</li>
       <li><b>Delete what our server holds for your account</b> (your scan-credit balance, unlock records, own-key scan counts, and any shared-inventory data): delete your account (above), or email us at the address below.</li>
@@ -266,7 +272,7 @@
     <p>This app is not directed at children under 13, and we do not knowingly collect any data from children.</p>
 
     <h2>Changes to this policy</h2>
-    <p>If we materially change how the app collects, uses, or shares data, we will update this policy and update the in-app and Play Store listing references to it. The "Effective date" at the top reflects the most recent change.</p>
+    <p>If we materially change how the app collects, uses, or shares data, we will update this policy and update the in-app and store listing references to it. The "Effective date" at the top reflects the most recent change.</p>
 
     <h2>Contact</h2>
     <p>Questions about this policy, or requests to delete data we hold for your account, can go to <a href="mailto:privacy@hyperkoalastudio.com">privacy@hyperkoalastudio.com</a>.</p>
