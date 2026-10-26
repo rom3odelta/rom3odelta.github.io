@@ -57,7 +57,7 @@
   <main>
     <h1>Privacy Policy — Store &amp; Forget</h1>
     <div class="meta">
-      <div><b>Effective date:</b> 2026-10-16</div>
+      <div><b>Effective date:</b> 2026-10-26</div>
       <div><b>App:</b> Store &amp; Forget (Android, iPhone and iPad)</div>
       <div><b>Operator:</b> Hyper Koala Studio</div>
       <div><b>Contact:</b> <a href="mailto:privacy@hyperkoalastudio.com">privacy@hyperkoalastudio.com</a></div>
@@ -200,6 +200,9 @@
     <p>If you turn on cloud backup, the app copies your inventory (item text and photos, and your attached documents if you leave that option on) into a <b>private, app-specific folder in your own Google Drive</b> (the Drive "app data" area). This data lives in <b>your</b> Google account, under your control — we cannot see or access it, and it is not visible in your normal Drive file list. You can disconnect backup or delete the backup folder at any time from your Google account. This uses Google Drive, governed by Google's privacy policy.</p>
     <p>On iPhone and iPad, the backup goes to a private folder for the app in your own iCloud Drive if you signed in with Apple only, or if you choose iCloud in the backup settings. It isn't shown in the Files app, and we can't see or access it. To delete it, open Settings on your iPhone, tap your name, then iCloud, and find Store &amp; Forget in the storage list. This uses iCloud, governed by Apple's privacy policy.</p>
 
+    <h3>Moving your inventory to another device (optional)</h3>
+    <p>"Move to another device" copies your inventory (item text, photos and attached documents) from one of your devices to another over your local Wi-Fi network. You start it on both devices and pair them by scanning a QR code. The data is encrypted and goes straight from one device to the other. It does not pass through our servers or any cloud service, and we never see it. While a transfer runs, the app shows a notification so it can finish if you switch apps or the screen turns off.</p>
+
     <h3>Ads (Google AdMob)</h3>
     <p>Store &amp; Forget shows ads. When you're signed in, they start after a number of free scans; if you use your own Gemini key, they start right away; while you're signed out on the free trial, there are none. You can also choose to watch a rewarded video to earn extra scans. Buying Remove ads turns the other ads off. Ads are served by <b>Google AdMob</b>, which may collect and use a <b>device advertising ID</b> and related device/ad information to serve and measure ads. This data is processed by Google as an advertising partner. On Android you can reset or delete your advertising ID in your device's Google settings. On iPhone and iPad, AdMob uses your device's advertising identifier (IDFA) only if you tap Allow when Apple's tracking prompt appears before the first ad. You can change that at any time in Settings &gt; Privacy &amp; Security &gt; Tracking. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a> and Google's privacy policy.</p>
 
@@ -229,10 +232,11 @@
 
     <h2>Permissions the app requests</h2>
     <ul>
-      <li><b>Camera</b> — to let you photograph items as you store them, to photograph a document you want to attach, and to quick-snap a price tag or expiry date. Photos are saved to the app's private storage on your device; a quick-snap photo is deleted after it is read.</li>
+      <li><b>Camera</b> — to let you photograph items as you store them, to photograph a document you want to attach, and to quick-snap a price tag or expiry date. Photos are saved to the app's private storage on your device; a quick-snap photo is deleted after it is read. The camera also scans the pairing code when you move your inventory to another device.</li>
       <li><b>Photos / Media library</b> — to let you attach existing photos from your library to an item.</li>
       <li><b>Files / documents</b> — to let you pick a receipt, warranty card, or manual from your device and attach it to an item. The app only reads the file you choose, and copies it into its own private storage; it does not browse or scan your files.</li>
       <li><b>Notifications</b> — to deliver the optional lend and expiry reminders described above.</li>
+      <li><b>Foreground service (data sync)</b> — keeps a "Move to another device" transfer running in the background, with a notification on screen while it runs.</li>
       <li><b>Tracking</b> (iPhone and iPad only) — Apple's App Tracking Transparency prompt, shown before the first ad. See "Ads" above.</li>
       <li><b>Internet / network</b> — for the optional features above (AI, sign-in, ads, cloud backup, sharing, buying credits).</li>
     </ul>
